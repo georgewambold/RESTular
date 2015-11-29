@@ -11,109 +11,110 @@
 </head>
 <body>
 
-<div class="header">
-	<h1>/RESTular</h1>
-	<p>A Sinatra/Rails learning tool.</p>
-</div>
+	<div class="header">
+		<h1>/RESTular</h1>
+		<p>A Sinatra/Rails learning tool.</p>
+	</div>
 
-<span>
-	<form>
-		Put your word here:
-		<input type="text" name="golden_word" placeholder="Articles">
-	</form>
-</span>
+	<span>
+		<form id="golden-form">
+			Put your word here:
+			<input type="text" name="golden_word" placeholder="articles">
+		</form>
+	</span>
 
-<table id="route-container">
-	<thead>
-		<tr>
-			<th>HTTP Request Type</th>
-			<th>Path</th>
-			<th>View File</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
+	<table id="route-container">
+		<thead>
+			<tr>
+				<th>HTTP Request Type</th>
+				<th>Path</th>
+				<th>View File</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
 
-		<tr class="route">
-			<td>GET</td>
-			<td>'/articles'</td>
-			<td>'/articles/index'</td>
-			<td>Display all articles</td>
-		</tr>
-		<tr class="route-info">
-			<td></td>
-		</tr>
+			<tr class="route">
+				<td>GET</td>
+				<td>'/articles'</td>
+				<td>'/articles/index'</td>
+				<td>Display all articles</td>
+			</tr>
+			<tr class="route-info">
+				<td></td>
+			</tr>
 
-	
-		<tr class="route">
-			<td>POST</td>
-			<td>'/articles'</td>
-			<td>'/articles/create'</td>
-			<td>Create a new article</td>
-		</tr>
-		<tr class="route-info">
-			<td></td>
-		</tr>
+		
+			<tr class="route">
+				<td>POST</td>
+				<td>'/articles'</td>
+				<td>'/articles/create'</td>
+				<td>Create a new article</td>
+			</tr>
+			<tr class="route-info">
+				<td></td>
+			</tr>
 
-	
-		<tr class="route">
-			<td>GET</td>
-			<td>'/articles/new'</td>
-			<td>'/articles/new'</td>
-			<td>Display page with new article form</td>
-		</tr>
-		<tr class="route-info">
-			<td></td>
-		</tr>
+		
+			<tr class="route">
+				<td>GET</td>
+				<td>'/articles/new'</td>
+				<td>'/articles/new'</td>
+				<td>Display page with new article form</td>
+			</tr>
+			<tr class="route-info">
+				<td></td>
+			</tr>
 
-	
-		<tr class="route">
-			<td>GET</td>
-			<td>'/articles/:id/edit'</td>
-			<td>'/articles/edit'</td>
-			<td>Display page with edit article form</td>
-		</tr>
-		<tr class="route-info">
-			<td></td>
-		</tr>
+		
+			<tr class="route">
+				<td>GET</td>
+				<td>'/articles/:id/edit'</td>
+				<td>'/articles/edit'</td>
+				<td>Display page with edit article form</td>
+			</tr>
+			<tr class="route-info">
+				<td></td>
+			</tr>
 
-	
-		<tr class="route">
-			<td>GET</td>
-			<td>'/articles/:id'</td>
-			<td>'/articles/show'</td>
-			<td>Show specific article</td>
-		</tr>
-		<tr class="route-info">
-			<td></td>
-		</tr>
+		
+			<tr class="route">
+				<td>GET</td>
+				<td>'/articles/:id'</td>
+				<td>'/articles/show'</td>
+				<td>Show specific article</td>
+			</tr>
+			<tr class="route-info">
+				<td></td>
+			</tr>
 
-	
-		<tr class="route">
-			<td>PUT/PATCH</td>
-			<td>'/articles/:id'</td>
-			<td>'/articles/update'</td>
-			<td>Edit existing article</td>
-		</tr>
-		<tr class="route-info">
-			<td></td>
-		</tr>
+		
+			<tr class="route">
+				<td>PUT/PATCH</td>
+				<td>'/articles/:id'</td>
+				<td>'/articles/update'</td>
+				<td>Edit existing article</td>
+			</tr>
+			<tr class="route-info">
+				<td></td>
+			</tr>
 
-	
-		<tr class="route">
-			<td>DELETE</td>
-			<td>'/articles/:id'</td>
-			<td>'/articles/destroy'</td>
-			<td>Delete existing article</td>
-		</tr>
-		<tr class="route-info">
-			<td></td>
-		</tr>
+		
+			<tr class="route">
+				<td>DELETE</td>
+				<td>'/articles/:id'</td>
+				<td>'/articles/destroy'</td>
+				<td>Delete existing article</td>
+			</tr>
+			<tr class="route-info">
+				<td></td>
+			</tr>
 
-	
-	</tbody>
+		
+		</tbody>
 
-</table>
+	</table>
 
 
 </body>
+</html>
