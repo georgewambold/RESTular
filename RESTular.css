@@ -1,0 +1,12 @@
+.header {
+	height: 150px;
+}
+
+.route-container {
+	display: table;
+}
+
+.route-info {
+	/*display: none;*/
+}
+
