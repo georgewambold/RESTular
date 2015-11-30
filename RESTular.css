@@ -1,0 +1,97 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+header {
+	text-align: left;
+	padding-left: 12%;
+	height: 130px;
+	width: 100%;
+	background: #c52f24;
+	padding-top: 5px;
+}
+
+header h1 {
+	color: white;
+	margin-top: 0px;
+}
+
+header p {
+	color: white;
+}
+
+#golden-form {
+	width: 100%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+#golden-form form {
+	margin: auto;
+	width: 600px; 
+}
+
+.submission-box {
+	width: 100%; 
+	height: 2em; 
+	border: 2px solid #CCC;
+}
+
+#route-container table {
+	margin: auto;
+}
+
+#route-container table th {
+	background: #EEE; 
+}
+
+#route-container table, th, td {
+	border: 2px solid #CCC;
+	min-width: 40px;
+}
+
+#route-container th, td {
+	padding: 10px;
+}
+
+.route td {
+	min-width: 150px;
+	text-align: left;
+}
+
+.route-info {
+	display: none;
+}
+
+.route-info td {
+	height: 100px;
+}
+
+.route-info pre{
+	background-color: #f7f7f7;
+  font-family: monospace;
+  overflow: auto;
+  white-space: pre-line;
+}
+
+.hover {
+	background-color: silver;
+}
+
+footer {
+	margin-top: 2%;
+	width: 100%;
+	height: 130px;
+	padding: 1%;
+	background-color: rgb(34, 34, 34);
+	color: rgb(153, 153, 153);
+	text-align: center;
+}
+footer p a {
+	color: #c52f24;
+}

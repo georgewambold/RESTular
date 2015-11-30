@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="RESTular.css">
+
+	<script type="text/javascript" src="resources/ZeroClipboard.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="RESTular.js"></script>
+
+</head>
+<body>
+	<header>
+		<h1>/RESTular</h1>
+		<p>A Sinatra/Rails learning tool.</p>
+	</header>
+	<div id="golden-form">
+		<form>
+			<input class="submission-box" type="search" name="golden_word" value="articles">
+		</form>
+	</div>
+
+	<div id="route-container">
+		<table>
+			<thead>
+				<tr>
+					<th>HTTP Request Type</th>
+					<th>Path</th>
+					<th>View File</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr class="route">
+					<td>GET</td>
+					<td>'/<span class="golden-text">articles</span>'</td>
+					<td>'/<span class="golden-text">articles</span>/index'</td>
+					<td>display a list of all <span class="golden-text">articles</span></td>
+				</tr>
+				<tr class="route-info">
+					<td colspan="2">
+							<pre>get '/<span class="golden-text">articles</span>' do
+
+								#your code here
+
+							end</pre>
+					</td>
+					<td colspan="2"></td>
+				</tr>
+
+				<tr class="route">
+					<td>GET</td>
+					<td>'/<span class="golden-text">articles</span>/new'</td>
+					<td>'/<span class="golden-text">articles</span>/new'</td>
+					<td>return an HTML form for creating new  <span class="golden-text">articles</span></td>
+				</tr>
+				<tr class="route-info">
+					<td colspan="2">
+							<pre>get '/<span class="golden-text">articles</span>/new' do
+
+								#your code here
+
+							end</pre>
+					</td>
+					<td colspan="2"></td>
+				</tr>
+			
+
+				<tr class="route">
+					<td>POST</td>
+					<td>'/<span class="golden-text">articles</span>'</td>
+					<td>'/<span class="golden-text">articles</span>/create'</td>
+					<td>create new <span class="golden-text">articles</span></td>
+				</tr>
+				<tr class="route-info">
+					<td colspan="2">
+							<pre>post '/<span class="golden-text">articles</span>' do
+
+								#your code here
+
+							end</pre>
+					</td>
+					<td colspan="2"></td>
+				</tr>
+
+			
+				<tr class="route">
+					<td>GET</td>
+					<td>'/<span class="golden-text">articles</span>/:id'</td>
+					<td>'/<span class="golden-text">articles</span>/show'</td>
+					<td>display specific <span class="golden-text">articles</span></td>
+				</tr>
+				<tr class="route-info">
+					<td colspan="2">
+							<pre>get '/<span class="golden-text">articles</span>/:id' do
+
+								#your code here
+
+							end</pre>
+					</td>
+					<td colspan="2"></td>
+				</tr>
+
+
+				<tr class="route">
+					<td>GET</td>
+					<td>'/<span class="golden-text">articles</span>/:id/edit'</td>
+					<td>'/<span class="golden-text">articles</span>/edit'</td>
+					<td>display page with edit <span class="golden-text">articles</span> form</td>
+				</tr>
+				<tr class="route-info">
+					<td colspan="2">
+							<pre>get '/<span class="golden-text">articles</span>/:id/edit' do
+
+								#your code here
+
+							end</pre>
+					</td>
+					<td colspan="2"></td>
+				</tr>
+			
+
+				<tr class="route">
+					<td>PUT/PATCH</td>
+					<td>'/<span class="golden-text">articles</span>/:id'</td>
+					<td>'/<span class="golden-text">articles</span>/update'</td>
+					<td>return an HTML form for editing a photo <span class="golden-text">articles</span></td>
+				</tr>
+				<tr class="route-info">
+					<td colspan="2">
+							<pre>put '/<span class="golden-text">articles</span>/:id' do
+
+								#your code here
+
+							end</pre>
+					</td>
+					<td colspan="2"></td>
+				</tr>
+
+			
+				<tr class="route">
+					<td>DELETE</td>
+					<td>'/<span class="golden-text">articles</span>/:id'</td>
+					<td>'/<span class="golden-text">articles</span>/destroy'</td>
+					<td>delete specific <span class="golden-text">articles</span></td>
+				</tr>
+				<tr class="route-info">
+					<td colspan="2">
+							<pre>delete '/<span class="golden-text">articles</span>/:id' do
+
+								#your code here
+
+							end</pre>
+					</td>
+					<td colspan="2"></td>
+				</tr>
+
+			
+			</tbody>
+		</table>
+	</div>
+
+	<footer>
+		<p>Created by George Wambold</p>
+		<p>Find me on <a href="github.com/gaw1990">github</a> or <a href="mailto:georgewambold@gmail.com">email me</a>!</p>
+	</footer>
+
+</body>
+</html>
