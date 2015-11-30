@@ -19,3 +19,19 @@ $(document).ready(function(){
 		$(this).next().toggle()
 	});
 });
+
+
+
+var client = new ZeroClipboard( $(".route-info td pre"), {
+              moviePath: "resources/ZeroClipboard.swf",
+              debug: false
+});
+
+
+
+
+
+
+
+
+
