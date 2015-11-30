@@ -18,7 +18,8 @@ header {
 
 header h1 {
 	color: white;
-	margin-top: 0px;
+	margin-top: 20px;
+	margin-bottom: 8px;
 }
 
 header p {
@@ -39,7 +40,10 @@ header p {
 .submission-box {
 	width: 100%; 
 	height: 2em; 
-	border: 2px solid #CCC;
+	/*border: 2px solid rgb(34, 34, 34);*/
+	border: 3px solid #CCC;
+
+	border-radius: 3px;
 }
 
 #route-container table {
@@ -84,9 +88,9 @@ header p {
 }
 
 footer {
-	margin-top: 2%;
+	margin-top: 4%;
 	width: 100%;
-	height: 130px;
+	height: 100px;
 	padding: 1%;
 	background-color: rgb(34, 34, 34);
 	color: rgb(153, 153, 153);
