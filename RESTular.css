@@ -84,8 +84,13 @@ header p {
 }
 
 .temp-header {
-	font-weight: bold;
+	/*font-weight: bold;*/
 	text-decoration: underline;
+	font-size: .9em;
+}
+
+.header-caption {
+	font-size: .8em;
 }
 
 .hover {

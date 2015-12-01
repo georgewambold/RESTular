@@ -49,10 +49,13 @@
 						end</pre>
 					</td>
 					<td colspan="2">
-						<span class="temp-header">Suggestions:</span>
+						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
 						<pre>get '/<span class="golden-text">articles</span>' do
-						#@<span class="golden-text">articles</span> = <span class="g-text-singular">Article</span>.find(params[:id])
-
+						
+						@<span class="golden-text">articles</span> = <span class="g-text-singular">Article</span>.all #define @<span class="golden-text">articles</span> for view
+						
+						erb :'/<span class="golden-text">articles</span>/index' #html/erb to see all <span class="golden-text">articles</span>
+						
 						end</pre>
 					</td>
 				</tr>
@@ -73,9 +76,10 @@
 						end</pre>
 					</td>
 					<td colspan="2">
+						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
 						<pre>get '/<span class="golden-text">articles</span>/new' do
 
-							#your code here
+						erb :'<span class="golden-text">articles</span>/new' #shows form for new <span class="golden-text">articles</span>
 
 						end</pre>
 					</td>
@@ -98,9 +102,13 @@
 						end</pre>
 					</td>
 					<td colspan="2">
+						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
 						<pre>post '/<span class="golden-text">articles</span>' do
 
-							#your code here
+							@<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.new(params[:<span class="g-text-s-dc">article</span>]) #form 'values' must be properly formatted for this to work
+
+
+
 
 						end</pre>
 					</td>
@@ -123,6 +131,7 @@
 						end</pre>
 					</td>
 					<td colspan="2">
+						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
 						<pre>get '/<span class="golden-text">articles</span>/:id' do
 
 							#your code here
@@ -148,6 +157,7 @@
 						end</pre>
 					</td>
 					<td colspan="2">
+						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
 						<pre>get '/<span class="golden-text">articles</span>/:id/edit' do
 
 							#your code here
@@ -173,6 +183,7 @@
 						end</pre>
 					</td>
 					<td colspan="2">
+						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
 						<pre>put '/<span class="golden-text">articles</span>/:id' do
 
 							#your code here
@@ -198,7 +209,7 @@
 						end</pre>
 					</td>
 					<td colspan="2">
-						<span class="temp-header">Path Template:</span>
+						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
 						<pre>delete '/<span class="golden-text">articles</span>/:id' do
 
 							#your code here
