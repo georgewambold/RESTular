@@ -33,6 +33,8 @@
 			</thead>
 			<tbody>
 
+
+
 				<tr class="route">
 					<td>GET</td>
 					<td>'/<span class="golden-text">articles</span>'</td>
@@ -41,22 +43,26 @@
 				</tr>
 				<tr class="route-info">
 					<td colspan="2">
-						<span class="temp-header">Path Template:</span>
-						<pre>get '/<span class="golden-text">articles</span>' do
+						<span class="temp-header">Path Template:</span>					
+						<pre>
+get '/<span class="golden-text">articles</span>' do
 
-							#your code here
+  #your code here
 
-						end</pre>
+end
+					</pre>						
 					</td>
 					<td colspan="2">
 						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre>get '/<span class="golden-text">articles</span>' do
-						
-						@<span class="golden-text">articles</span> = <span class="g-text-singular">Article</span>.all #define instance variable for view
-						
-						erb :'/<span class="golden-text">articles</span>/index' #shows all <span class="golden-text">articles</span> view (index)
-						
-						end</pre>
+						<pre>
+get '/<span class="golden-text">articles</span>' do
+
+  @<span class="golden-text">articles</span> = <span class="g-text-singular">Article</span>.all #define instance variable for view
+
+  erb :'/<span class="golden-text">articles</span>/index' #shows all <span class="golden-text">articles</span> view (index)
+
+end
+						</pre>
 					</td>
 				</tr>
 
@@ -69,19 +75,23 @@
 				<tr class="route-info">
 					<td colspan="2">
 						<span class="temp-header">Path Template:</span>
-						<pre>get '/<span class="golden-text">articles</span>/new' do
+						<pre>
+get '/<span class="golden-text">articles</span>/new' do
 
-							#your code here
+  #your code here
 
-						end</pre>
+end
+						</pre>
 					</td>
 					<td colspan="2">
 						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre>get '/<span class="golden-text">articles</span>/new' do
+						<pre>
+get '/<span class="golden-text">articles</span>/new' do
 
-						erb :'<span class="golden-text">articles</span>/new' #shows view with new <span class="golden-text">articles</span> form
+  erb :'<span class="golden-text">articles</span>/new' #shows view with new <span class="golden-text">articles</span> form
 
-						end</pre>
+end
+						</pre>
 					</td>
 				</tr>
 			
@@ -95,26 +105,30 @@
 				<tr class="route-info">
 					<td colspan="2">
 						<span class="temp-header">Path Template:</span>
-						<pre>post '/<span class="golden-text">articles</span>' do
+						<pre>
+post '/<span class="golden-text">articles</span>' do
 
-							#your code here
+  #your code here
 
-						end</pre>
+end
+						</pre>
 					</td>
 					<td colspan="2">
 						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre>post '/<span class="golden-text">articles</span>' do
+						<pre>
+post '/<span class="golden-text">articles</span>' do
 
-							#below works with properly formatted params in html form
-							@<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.new(params[:<span class="g-text-s-dc">article</span>]) #create new <span class="g-text-s-dc">article</span>
+  #below works with properly formatted params in html form
+  @<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.new(params[:<span class="g-text-s-dc">article</span>]) #create new <span class="g-text-s-dc">article</span>
 
-							if @<span class="g-text-s-dc">article</span>.save #saves new <span class="g-text-s-dc">article</span> or returns false if unsuccessful
-							redirect '/<span class="golden-text">articles</span>' #links back to <span class="golden-text">articles</span> index page
-							else 
-							erb :errors #shows an errors view you define
-							end
+  if @<span class="g-text-s-dc">article</span>.save #saves new <span class="g-text-s-dc">article</span> or returns false if unsuccessful
+    redirect '/<span class="golden-text">articles</span>' #links back to <span class="golden-text">articles</span> index page
+  else 
+    erb :errors #shows an errors view you define
+  end
 
-						end</pre>
+end
+						</pre>
 					</td>
 				</tr>
 
@@ -128,22 +142,26 @@
 				<tr class="route-info">
 					<td colspan="2">
 						<span class="temp-header">Path Template:</span>
-						<pre>get '/<span class="golden-text">articles</span>/:id' do
+						<pre>
+get '/<span class="golden-text">articles</span>/:id' do
 
-							#your code here
+  #your code here
 
-						end</pre>
+end
+						</pre>
 					</td>
 					<td colspan="2">
 						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre>get '/<span class="golden-text">articles</span>/:id' do
-			
-						#gets params from url
-						@<span class="g-text-s-dc">article</span> = <span class="g-text-s-dc">article</span>.find(params[:id]) #define instance variable for view
+						<pre>
+get '/<span class="golden-text">articles</span>/:id' do
 
-						erb :'<span class="golden-text">articles</span>/show' #shows single <span class="g-text-s-dc">article</span> view
+  #gets params from url
+  @<span class="g-text-s-dc">article</span> = <span class="g-text-s-dc">article</span>.find(params[:id]) #define instance variable for view
 
-						end</pre>
+  erb :'<span class="golden-text">articles</span>/show' #shows single <span class="g-text-s-dc">article</span> view
+
+end
+						</pre>
 					</td>
 				</tr>
 
@@ -157,22 +175,26 @@
 				<tr class="route-info">
 					<td colspan="2">
 						<span class="temp-header">Path Template:</span>
-						<pre>get '/<span class="golden-text">articles</span>/:id/edit' do
+						<pre>
+get '/<span class="golden-text">articles</span>/:id/edit' do
 
-							#your code here
+  #your code here
 
-						end</pre>
+end
+						</pre>
 					</td>
 					<td colspan="2">
 						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre>get '/<span class="golden-text">articles</span>/:id/edit' do
-	
-							#get params from url
-							@<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.find(params[:id]) #define intstance variable for view
+						<pre>
+get '/<span class="golden-text">articles</span>/:id/edit' do
 
-							erb '<span class="golden-text">articles</span>/edit' #shows view with edit <span class="g-text-s-dc">article</span> form
+  #get params from url
+  @<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.find(params[:id]) #define intstance variable for view
 
-						end</pre>
+  erb '<span class="golden-text">articles</span>/edit' #shows view with edit <span class="g-text-s-dc">article</span> form
+
+end
+						</pre>
 					</td>
 				</tr>
 			
@@ -186,28 +208,32 @@
 				<tr class="route-info">
 					<td colspan="2">
 						<span class="temp-header">Path Template:</span>
-						<pre>put '/<span class="golden-text">articles</span>/:id' do
+						<pre>
+put '/<span class="golden-text">articles</span>/:id' do
 
-							#your code here
+  #your code here
 
-						end</pre>
+end
+						</pre>
 					</td>
 					<td colspan="2">
 						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre>put '/<span class="golden-text">articles</span>/:id' do
+						<pre>
+put '/<span class="golden-text">articles</span>/:id' do
 
-						#get params from url
-						@<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.find(params[:id]) #define variable to edit
+  #get params from url
+  @<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.find(params[:id]) #define variable to edit
 
-						@<span class="g-text-s-dc">article</span>.assign_attributes(params[:<span class="g-text-s-dc">article</span>]) #assign new attributes
+  @<span class="g-text-s-dc">article</span>.assign_attributes(params[:<span class="g-text-s-dc">article</span>]) #assign new attributes
 
-						if @<span class="g-text-s-dc">article</span>.save #saves new <span class="g-text-s-dc">article</span> or returns false if unsuccessful
-						redirect '/<span class="golden-text">articles</span>' #links back to <span class="golden-text">articles</span> index page
-						else 
-						erb :errors #shows an errors view you define
-						end
+  if @<span class="g-text-s-dc">article</span>.save #saves new <span class="g-text-s-dc">article</span> or returns false if unsuccessful
+    redirect '/<span class="golden-text">articles</span>' #links back to <span class="golden-text">articles</span> index page
+  else 
+    erb :errors #shows an errors view you define
+  end
 
-						end</pre>
+end
+						</pre>
 					</td>
 				</tr>
 
@@ -221,22 +247,26 @@
 				<tr class="route-info">
 					<td colspan="2">
 						<span class="temp-header">Path Template:</span>
-						<pre>delete '/<span class="golden-text">articles</span>/:id' do
+						<pre>
+delete '/<span class="golden-text">articles</span>/:id' do
 
-							#your code here
+  #your code here
 
-						end</pre>
+end
+						</pre>
 					</td>
 					<td colspan="2">
 						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre>delete '/<span class="golden-text">articles</span>/:id' do
+						<pre>
+delete '/<span class="golden-text">articles</span>/:id' do
 
-						#get params from url
-						@<span class="g-text-s-dc">article</span> = <span class="golden-text">articles</span>.find(params[:id]) #define <span class="g-text-s-dc">article</span> to delete
+  #get params from url
+  @<span class="g-text-s-dc">article</span> = <span class="golden-text">articles</span>.find(params[:id]) #define <span class="g-text-s-dc">article</span> to delete
 
-						@<span class="g-text-s-dc">article</span>.destroy #delete <span class="g-text-s-dc">article</span> 
+  @<span class="g-text-s-dc">article</span>.destroy #delete <span class="g-text-s-dc">article</span> 
 
-						end</pre>
+end
+						</pre>
 					</td>
 				</tr>
 

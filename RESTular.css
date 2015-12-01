@@ -77,10 +77,10 @@ header p {
 }
 
 .route-info pre{
-	background-color: #f7f7f7;
+  background-color: #f7f7f7;
   font-family: monospace;
-  overflow: auto;
-  white-space: pre-line;
+  /*overflow: auto;*/
+  white-space: pre;
 }
 
 .temp-header {
