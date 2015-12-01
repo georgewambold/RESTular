@@ -1,12 +1,13 @@
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+function capitalize(string) {
+  var lowerCaseString = string.toLowerCase();
+    return lowerCaseString.charAt(0).toUpperCase() + lowerCaseString.slice(1);
 }
 
 
 $(document).ready(function() {
 	$(".submission-box").on("keyup", function() {
     $(".golden-text").text($(this).val().toLowerCase());		
-    $(".g-text-singular").text(capitalizeFirstLetter(pluralize($(this).val(), 1)));
+    $(".g-text-singular").text(pluralize(capitalize($(this).val()), 1));
     $(".g-text-s-dc").text((pluralize($(this).val(), 1)));
 	});
 });
