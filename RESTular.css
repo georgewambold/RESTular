@@ -10,7 +10,7 @@ html,body
 header {
 	text-align: left;
 	padding-left: 12%;
-	height: 130px;
+	height: 119px;
 	width: 100%;
 	background: #c52f24;
 	padding-top: 5px;
@@ -83,6 +83,11 @@ header p {
   white-space: pre-line;
 }
 
+.temp-header {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .hover {
 	background-color: silver;
 }
@@ -90,7 +95,7 @@ header p {
 footer {
 	margin-top: 4%;
 	width: 100%;
-	height: 100px;
+	height: 140px;
 	padding: 1%;
 	background-color: rgb(34, 34, 34);
 	color: rgb(153, 153, 153);
