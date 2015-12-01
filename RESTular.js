@@ -5,8 +5,9 @@ function capitalizeFirstLetter(string) {
 
 $(document).ready(function() {
 	$(".submission-box").on("keyup", function() {
-    $(".golden-text").text($(this).val().toLowerCase())		
-    $(".g-text-singular").text(capitalizeFirstLetter(pluralize($(this).val(), 1)))
+    $(".golden-text").text($(this).val().toLowerCase());		
+    $(".g-text-singular").text(capitalizeFirstLetter(pluralize($(this).val(), 1)));
+    $(".g-text-s-dc").text((pluralize($(this).val(), 1)));
 	});
 });
 
@@ -22,9 +23,15 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$(".route").on("click", function() {
-		$(this).next().toggle()
+		$(this).next().toggle();
+    $(this).toggleClass('in-use');
+    $(this).toggleClass('hover');
 	});
 });
+
+
+
+
 
 
 /* global define */
