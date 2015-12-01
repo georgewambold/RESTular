@@ -87,10 +87,16 @@ header p {
 	/*font-weight: bold;*/
 	text-decoration: underline;
 	font-size: .9em;
+	vertical-align: top;
 }
 
 .header-caption {
 	font-size: .8em;
+}
+
+
+.in-use {
+	background-color: rgb(255, 249, 216);
 }
 
 .hover {
