@@ -45,7 +45,7 @@ $(document).ready(function(){
   } else if (rand100 >= 20) {
       $('.sub-box-under').text("Rapid Restful Results! (TM)")
   } else {
-      $('.sub-box-under').text("Kitchen it? Kitchen in.")
+      $('.sub-box-under').text("Kitchen it? Kitchen it.")
   }
 });
 
