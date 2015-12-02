@@ -22,13 +22,18 @@ header h1 {
 	margin-bottom: 8px;
 }
 
+#second-half {
+	color: #f4b7b2;
+}
+
+
 header p {
 	color: white;
 }
 
 #golden-form {
 	width: 100%;
-	margin-bottom: 2%;
+	
 	margin-top: 2%;
 }
 
@@ -40,13 +45,22 @@ header p {
 .submission-box {
 	width: 100%; 
 	height: 2em; 
-	/*border: 2px solid rgb(34, 34, 34);*/
 	border: 3px solid #CCC;
-
 	border-radius: 3px;
 }
 
+
+.sub-box-under {
+	font-size: .95em;
+	width: 40%;
+	text-align: center;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 2%;
+}
+
 #route-container table {
+	margin-top: 2%;
 	margin: auto;
 }
 
@@ -112,7 +126,13 @@ footer {
 	background-color: rgb(34, 34, 34);
 	color: rgb(153, 153, 153);
 	text-align: center;
+	font-size: .9em;
 }
+
+footer p {
+	
+}
+
 footer p a {
 	color: #c52f24;
 }
