@@ -8,12 +8,14 @@ html,body
 }
 
 header {
+	text-shadow: 0 0 1px rgba(0,0,0,0.3);
 	text-align: left;
 	padding-left: 12%;
 	height: 119px;
 	width: 100%;
 	background: #c52f24;
 	padding-top: 5px;
+	border-bottom: solid grey 1px;
 }
 
 header h1 {
