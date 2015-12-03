@@ -99,6 +99,10 @@ header p {
   white-space: pre;
 }
 
+.copy-prompt {
+	text-align: center;
+}
+
 .temp-header {
 	/*font-weight: bold;*/
 	text-decoration: underline;
