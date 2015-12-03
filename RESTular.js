@@ -8,7 +8,10 @@ $(document).ready(function() {
       client.setText(preData);
     })
     client.on( "aftercopy", function( event ) {
-      event.target.sibling.text("Copied!")
+      console.log(event.target)
+      console.log($(event.target))
+      console.log($(event.target).siblings(".copy-prompt").text("Copied!"))
+
     });
   });
 });
