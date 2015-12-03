@@ -1,4 +1,20 @@
 $(document).ready(function() {
+  var client = new ZeroClipboard( $(".route-pre") );
+
+  client.on( "ready", function( readyEvent ) {
+    client.on("copy", function(event) {
+      console.log(client);
+      var preData = event.target.innerText;
+      client.setText(preData);
+    })
+    client.on( "aftercopy", function( event ) {
+    });
+  });
+});
+          
+
+
+$(document).ready(function() {
 
   $(".submission-box").on("keyup", function() {
     $(".golden-text").text($(this).val().toLowerCase());    
