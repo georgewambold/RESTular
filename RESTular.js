@@ -8,10 +8,10 @@ $(document).ready(function() {
       client.setText(preData);
     })
     client.on( "aftercopy", function( event ) {
-      console.log(event.target)
-      console.log($(event.target))
-      console.log($(event.target).siblings(".copy-prompt").text("Copied!"))
-
+      $(event.target).siblings(".copy-prompt").text("Copied!");
+      setTimeout(function(){
+        $(event.target).siblings(".copy-prompt").text("^click to copy^");
+        }, 10000);
     });
   });
 });
