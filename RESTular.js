@@ -8,6 +8,7 @@ $(document).ready(function() {
       client.setText(preData);
     })
     client.on( "aftercopy", function( event ) {
+      event.target.sibling.text("Copied!")
     });
   });
 });
