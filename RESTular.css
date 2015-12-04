@@ -98,6 +98,9 @@ header p {
   /*overflow: auto;*/
   white-space: pre;
 }
+.on-click {	
+border: 2px solid #f4b7b2 ;
+}
 
 .copy-prompt {
 	text-align: center;
