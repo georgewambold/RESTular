@@ -13,8 +13,8 @@ $(document).ready(function() {
       $(event.target).addClass(".on-click")
       setTimeout(function(){
         $(event.target).siblings(".copy-prompt").text("^click to copy^");
-        $(event.target).addClass(".on-click")
-      }, 10000);
+        $(event.target).addClass(".on-click");
+      }, 1000);
     });
   });
 
