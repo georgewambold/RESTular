@@ -57,8 +57,8 @@ header p {
 	width: 40%;
 	text-align: center;
 	margin: auto;
-	margin-top: 5px;
-	margin-bottom: 2%;
+	margin-top: 12px;
+	margin-bottom: 1.5%;
 }
 
 #route-container table {
@@ -101,6 +101,7 @@ header p {
 
 .copy-prompt {
 	text-align: center;
+	font-size: .8em;
 }
 
 .temp-header {

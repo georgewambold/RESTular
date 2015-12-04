@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   var client = new ZeroClipboard( $(".route-pre") );
 
   client.on( "ready", function( readyEvent ) {
@@ -11,14 +12,9 @@ $(document).ready(function() {
       $(event.target).siblings(".copy-prompt").text("Copied!");
       setTimeout(function(){
         $(event.target).siblings(".copy-prompt").text("^click to copy^");
-        }, 10000);
+      }, 10000);
     });
   });
-});
-          
-
-
-$(document).ready(function() {
 
   $(".submission-box").on("keyup", function() {
     $(".golden-text").text($(this).val().toLowerCase());    
@@ -41,20 +37,20 @@ $(document).ready(function() {
     $(this).toggleClass('hover');
   });
 
-  var rand100 = Math.floor(Math.random() * 100)
-  if (rand100 === 69) {
-    $('.sub-box-under').text("Rest-a-licious!")
-  } else if (rand100 >= 80) {
-    $('.sub-box-under').text("Type something in!")
-  } else if (rand100 >= 60) {
-      $('.sub-box-under').text("Try your own!")
-  } else if (rand100 >= 40) {
-      $('.sub-box-under').text("Chi Bobolinks 2015!")
-  } else if (rand100 >= 20) {
-      $('.sub-box-under').text("Rapid Restful Results! (TM)")
-  } else {
-      $('.sub-box-under').text("Kitchen it? Kitchen it.")
-  }
+  // var rand100 = Math.floor(Math.random() * 100)
+  // if (rand100 === 69) {
+  //   $('.sub-box-under').text("Rest-a-licious!")
+  // } else if (rand100 >= 80) {
+  //   $('.sub-box-under').text("Type something in!")
+  // } else if (rand100 >= 60) {
+  //     $('.sub-box-under').text("Try your own!")
+  // } else if (rand100 >= 40) {
+  //     $('.sub-box-under').text("Chi Bobolinks 2015!")
+  // } else if (rand100 >= 20) {
+  //     $('.sub-box-under').text("Rapid Restful Results! (TM)")
+  // } else {
+  //     $('.sub-box-under').text("Kitchen it? Kitchen it.")
+  // }
 
 
 });
