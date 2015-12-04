@@ -10,9 +10,10 @@ $(document).ready(function() {
     })
     client.on( "aftercopy", function( event ) {
       $(event.target).siblings(".copy-prompt").text("Copied!");
+      $(event.target).addClass(".on-click")
       setTimeout(function(){
         $(event.target).siblings(".copy-prompt").text("^click to copy^");
-        $(event.target).toggleClass(".on-click")
+        $(event.target).addClass(".on-click")
       }, 10000);
     });
   });
