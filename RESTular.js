@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   var client = new ZeroClipboard( $(".route-pre") );
 
   client.on( "ready", function( readyEvent ) {
@@ -12,6 +12,7 @@ $(document).ready(function() {
       $(event.target).siblings(".copy-prompt").text("Copied!");
       setTimeout(function(){
         $(event.target).siblings(".copy-prompt").text("^click to copy^");
+        $(event.target).toggleClass(".on-click")
       }, 10000);
     });
   });
