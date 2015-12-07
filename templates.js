@@ -109,12 +109,3 @@ routes = [
 		"suggested" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n\n  @<span class='g-text-s-dc'>article</span> = <span class='golden-text'>articles</span>.find(params[:id]) #define <span class='g-text-s-dc'>article</span> to delete\n\n  @<span class='g-text-s-dc'>article</span>.destroy #delete <span class='g-text-s-dc'>article</span>\n\nend\n"
 	},
 ]
-
-for (var i = 0; i < routes.length; i++) {
-	var row = new TableRows(routes[i])
-	console.log(row.createRows())
-}
-
-
-
-
