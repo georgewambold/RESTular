@@ -74,16 +74,40 @@ routes = [
   	"path" : "'/<span class='golden-text'>articles</span>/:id/edit'",
 
   	"viewFile" : "'/<span class='golden-text'>articles</span>/edit'",
+  	//STOPPED HERE
 
-  	"description" : "display specific <span class='golden-text'>articles</span>",
+  	"description" : "display page with edit <span class='golden-text'>articles",
 
- 		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
+ 		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id' do\n\n  #gets params from url\n\n  @<span class='g-text-s-dc'>article</span> = <span class='g-text-s-dc'>article</span>.find(params[:id]) #define instance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/show' #shows single <span class='g-text-s-dc'>article</span> view\n\nend\n"
+		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #get params from url\n  @<span class='g-text-s-dc'>article</span> = <span class='g-text-singular'>Article</span>.find(params[:id]) #define intstance variable for view\n\n  erb '<span class='golden-text'>articles</span>/edit' #shows view with edit <span class='g-text-s-dc'>article</span> form\n\nend\n"
 	},
-	{},
-	{},
-	{},
+	{
+		"type" : "PUT/PATCH",
+
+  	"path" : "'/<span class='golden-text'>articles</span>/:id'",
+
+  	"viewFile" : "'/<span class='golden-text'>articles</span>/update'",
+
+  	"description" : "return an HTML form for editing <span class='golden-text'>articles</span>",
+
+ 		"vanilla" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
+
+		"suggested" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='g-text-s-dc'>article</span> = <span class='g-text-singular'>Article</span>.find(params[:id]) #define variable to edit\n\n  @<span class='g-text-s-dc'>article</span>.assign_attributes(params[:<span class='g-text-s-dc'>article</span>]) #assign new attributes\n\n  if @<span class='g-text-s-dc'>article</span>.save #saves new <span class='g-text-s-dc'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
+	},
+	{
+		"type" : "DELETE",
+
+  	"path" : "'/<span class='golden-text'>articles</span>/:id'",
+
+  	"viewFile" : "'/<span class='golden-text'>articles</span>/destroy'",
+
+  	"description" : "delete specific <span class='golden-text'>articles</span>",
+
+ 		"vanilla" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\n\n\nend\n",
+
+		"suggested" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n\n  @<span class='g-text-s-dc'>article</span> = <span class='golden-text'>articles</span>.find(params[:id]) #define <span class='g-text-s-dc'>article</span> to delete\n\n  @<span class='g-text-s-dc'>article</span>.destroy #delete <span class='g-text-s-dc'>article</span>\n\nend\n"
+	},
 ]
 
 for (var i = 0; i < routes.length; i++) {
