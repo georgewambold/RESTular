@@ -1,301 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>RESTular</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="RESTular.css">
-	<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
-	<script type="text/javascript" src="resources/ZeroClipboard.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="RESTular.js"></script>
-	<script src="resources/pluralize.js"></script>
-
-</head>
-<body>
-	<header>
-		<h1>/REST<span id="second-half">ular</span></h1>
-		<p>A Rails/Sinatra learning tool.</p>
-	</header>
-	<div id="golden-form">
-		<form>
-			<input class="submission-box" type="search" name="golden_word" value="articles">
-		</form>
-	</div>
-
-	<div class="sub-box-under">(Type in your table name and <b>click table</b> for full route info)</div>
-
-	<div id="route-container">
-		<table>
-			<thead>
-				<tr>
-					<th>HTTP Request Type</th>
-					<th>Path</th>
-					<th>View File</th>
-					<th>Description</th>
-				</tr>
-			</thead>
-			<tbody>
-
-
-
-				<tr class="route">
-					<td>GET</td>
-					<td>'/<span class="golden-text">articles</span>'</td>
-					<td>'/<span class="golden-text">articles</span>/index'</td>
-					<td>display a list of all <span class="golden-text">articles</span></td>
-				</tr>
-				<tr class="route-info">
-					<td colspan="2">
-						<span class="temp-header">Path Template:</span>					
-						<pre class="route-pre">
-get '/<span class="golden-text">articles</span>' do
-
-  #your code here
-
-end
-					</pre>
-					<div class="copy-prompt">^click to copy^</div>						
-					</td>
-					<td colspan="2">
-						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre class="route-pre">
-get '/<span class="golden-text">articles</span>' do
-
-  @<span class="golden-text">articles</span> = <span class="g-text-singular">Article</span>.all #define instance variable for view
-
-  erb :'<span class="golden-text">articles</span>/index' #shows all <span class="golden-text">articles</span> view (index)
-
-end
-						</pre>
-					<div class="copy-prompt">^click to copy^</div>
-					</td>
-				</tr>
-
-				<tr class="route">
-					<td>GET</td>
-					<td>'/<span class="golden-text">articles</span>/new'</td>
-					<td>'/<span class="golden-text">articles</span>/new'</td>
-					<td>return an HTML form for creating new  <span class="golden-text">articles</span></td>
-				</tr>
-				<tr class="route-info">
-					<td colspan="2">
-						<span class="temp-header">Path Template:</span>
-						<pre class="route-pre">
-get '/<span class="golden-text">articles</span>/new' do
-
-  #your code here
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-					<td colspan="2">
-						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre class="route-pre">
-get '/<span class="golden-text">articles</span>/new' do
-
-  erb :'<span class="golden-text">articles</span>/new' #shows view with new <span class="golden-text">articles</span> form
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-				</tr>
-			
-
-				<tr class="route">
-					<td>POST</td>
-					<td>'/<span class="golden-text">articles</span>'</td>
-					<td>'/<span class="golden-text">articles</span>/create'</td>
-					<td>create new <span class="golden-text">articles</span></td>
-				</tr>
-				<tr class="route-info">
-					<td colspan="2">
-						<span class="temp-header">Path Template:</span>
-						<pre class="route-pre">
-post '/<span class="golden-text">articles</span>' do
-
-  #your code here
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-					<td colspan="2">
-						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre class="route-pre">
-post '/<span class="golden-text">articles</span>' do
-
-  #below works with properly formatted params in html form
-  @<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.new(params[:<span class="g-text-s-dc">article</span>]) #create new <span class="g-text-s-dc">article</span>
-
-  if @<span class="g-text-s-dc">article</span>.save #saves new <span class="g-text-s-dc">article</span> or returns false if unsuccessful
-    redirect '/<span class="golden-text">articles</span>' #links back to <span class="golden-text">articles</span> index page
-  else 
-    erb :errors #shows an errors view you define
-  end
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-				</tr>
-
-			
-				<tr class="route">
-					<td>GET</td>
-					<td>'/<span class="golden-text">articles</span>/:id'</td>
-					<td>'/<span class="golden-text">articles</span>/show'</td>
-					<td>display specific <span class="golden-text">articles</span></td>
-				</tr>
-				<tr class="route-info">
-					<td colspan="2">
-						<span class="temp-header">Path Template:</span>
-						<pre class="route-pre">
-get '/<span class="golden-text">articles</span>/:id' do
-
-  #your code here
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-					<td colspan="2">
-						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre class="route-pre">
-get '/<span class="golden-text">articles</span>/:id' do
-
-  #gets params from url
-  @<span class="g-text-s-dc">article</span> = <span class="g-text-s-dc">article</span>.find(params[:id]) #define instance variable for view
-
-  erb :'<span class="golden-text">articles</span>/show' #shows single <span class="g-text-s-dc">article</span> view
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-				</tr>
-
-				<tr class="route">
-					<td>GET</td>
-					<td>'/<span class="golden-text">articles</span>/:id/edit'</td>
-					<td>'/<span class="golden-text">articles</span>/edit'</td>
-					<td>display page with edit <span class="golden-text">articles</span> form</td>
-				</tr>
-				<tr class="route-info">
-					<td colspan="2">
-						<span class="temp-header">Path Template:</span>
-						<pre class="route-pre">
-get '/<span class="golden-text">articles</span>/:id/edit' do
-
-  #your code here
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-					<td colspan="2">
-						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre class="route-pre">
-get '/<span class="golden-text">articles</span>/:id/edit' do
-
-  #get params from url
-  @<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.find(params[:id]) #define intstance variable for view
-
-  erb '<span class="golden-text">articles</span>/edit' #shows view with edit <span class="g-text-s-dc">article</span> form
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-				</tr>
-			
-
-				<tr class="route">
-					<td>PUT/PATCH</td>
-					<td>'/<span class="golden-text">articles</span>/:id'</td>
-					<td>'/<span class="golden-text">articles</span>/update'</td>
-					<td>return an HTML form for editing <span class="golden-text">articles</span></td>
-				</tr>
-				<tr class="route-info">
-					<td colspan="2">
-						<span class="temp-header">Path Template:</span>
-						<pre class="route-pre">
-put '/<span class="golden-text">articles</span>/:id' do
-
-  #your code here
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-					<td colspan="2">
-						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre class="route-pre">
-put '/<span class="golden-text">articles</span>/:id' do
-
-  #get params from url
-  @<span class="g-text-s-dc">article</span> = <span class="g-text-singular">Article</span>.find(params[:id]) #define variable to edit
-
-  @<span class="g-text-s-dc">article</span>.assign_attributes(params[:<span class="g-text-s-dc">article</span>]) #assign new attributes
-
-  if @<span class="g-text-s-dc">article</span>.save #saves new <span class="g-text-s-dc">article</span> or returns false if unsuccessful
-    redirect '/<span class="golden-text">articles</span>' #links back to <span class="golden-text">articles</span> index page
-  else 
-    erb :errors #shows an errors view you define
-  end
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-				</tr>
-
-			
-				<tr class="route">
-					<td>DELETE</td>
-					<td>'/<span class="golden-text">articles</span>/:id'</td>
-					<td>'/<span class="golden-text">articles</span>/destroy'</td>
-					<td>delete specific <span class="golden-text">articles</span></td>
-				</tr>
-				<tr class="route-info">
-					<td colspan="2">
-						<span class="temp-header">Path Template:</span>
-						<pre class="route-pre">
-delete '/<span class="golden-text">articles</span>/:id' do
-
-  #your code here
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-					<td colspan="2">
-						<span class="temp-header">Suggestions:</span><span class="header-caption"> (to be taken with a grain of salt)</span>
-						<pre class="route-pre">
-delete '/<span class="golden-text">articles</span>/:id' do
-
-  #get params from url
-  @<span class="g-text-s-dc">article</span> = <span class="golden-text">articles</span>.find(params[:id]) #define <span class="g-text-s-dc">article</span> to delete
-
-  @<span class="g-text-s-dc">article</span>.destroy #delete <span class="g-text-s-dc">article</span> 
-
-end
-						</pre>
-						<div class="copy-prompt">^click to copy^</div>
-					</td>
-				</tr>
-
-			
-			</tbody>
-		</table>
-	</div>
-
-	<footer>
-		<p>Created by George Wambold</p>
-		<p>Find me on <a href="https://github.com/gaw1990">github</a> or <a href="mailto:georgewambold@gmail.com">email me</a>!</p>
-	</footer>
-
-</body>
+	<head>
+		<title>RESTular</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="resources/normalize.css">
+		<link rel="stylesheet" href="RESTular.css">
+		<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="resources/ZeroClipboard.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="RESTular.js"></script>
+		<script src="templates.js"></script>
+		<script src="resources/pluralize.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>/REST<span id="second-half">ular</span></h1>
+			<p>A Rails/Sinatra learning tool.</p>
+		</header>
+		<div id="golden-form">
+			<form>
+				<input class="submission-box" type="search" name="golden_word" value="articles">
+			</form>
+		</div>
+		<div class="sub-box-under">(Type in your table name and <b>click table</b> for full route info)</div>
+		<div id="route-container">
+			<table>
+				<thead>
+					<tr>
+						<th>HTTP Request Type</th>
+						<th>Path</th>
+						<th>View File</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody id="route-body">
+					<script>
+						for (var i = 0; i < routes.length; i++) {
+							var row = new TableRows(routes[i])
+							$("#route-body").append(row.createRows())
+						}
+					</script>
+				</tbody>
+			</table>
+		</div>
+		<footer>
+			<p>Created by George Wambold</p>
+			<p>Find me on <a href="https://github.com/gaw1990">github</a> or <a href="mailto:georgewambold@gmail.com">email me</a>!</p>
+		</footer>
+	</body>
 </html>			
