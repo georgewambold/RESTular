@@ -8,7 +8,9 @@
 	<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
 	<script type="text/javascript" src="resources/ZeroClipboard.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
 	<script src="RESTular.js"></script>
+	<script src="templates.js"></script>
 	<script src="resources/pluralize.js"></script>
 
 </head>
@@ -35,10 +37,15 @@
 					<th>Description</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="route-body">
+				<script>
+					for (var i = 0; i < routes.length; i++) {
+						var row = new TableRows(routes[i])
+						$("#route-body").append(row.createRows())
+					}
+				</script>
 
-
-
+<!-- 
 				<tr class="route">
 					<td>GET</td>
 					<td>'/<span class="golden-text">articles</span>'</td>
@@ -71,6 +78,11 @@ end
 					<div class="copy-prompt">^click to copy^</div>
 					</td>
 				</tr>
+
+ -->
+
+
+
 
 				<tr class="route">
 					<td>GET</td>
