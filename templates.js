@@ -74,7 +74,6 @@ routes = [
   	"path" : "'/<span class='golden-text'>articles</span>/:id/edit'",
 
   	"viewFile" : "'/<span class='golden-text'>articles</span>/edit'",
-  	//STOPPED HERE
 
   	"description" : "display page with edit <span class='golden-text'>articles",
 
@@ -104,7 +103,7 @@ routes = [
 
   	"description" : "delete specific <span class='golden-text'>articles</span>",
 
- 		"vanilla" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\n\n\nend\n",
+ 		"vanilla" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
 		"suggested" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n\n  @<span class='g-text-s-dc'>article</span> = <span class='golden-text'>articles</span>.find(params[:id]) #define <span class='g-text-s-dc'>article</span> to delete\n\n  @<span class='g-text-s-dc'>article</span>.destroy #delete <span class='g-text-s-dc'>article</span>\n\nend\n"
 	},
