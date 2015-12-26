@@ -25,18 +25,18 @@ routes = [
 
 	  	"description" : "display a list of all <span class='golden-text'>articles</span>",
 
-	 		"vanilla" : "\nget '/articles' do\n\n  #your code here\n\nend\n",
+	 	"vanilla" : "\nget '/articles' do\n\n  #your code here\n\nend\n",
 
-			"suggested" : "\nget '/<span class='golden-text'>articles</span>' do\n\n  @<span class='golden-text'>articles</span> = <span class='g-text-singular'>Article</span>.all #define instance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/index' #shows all <span class='golden-text'>articles</span> view (index)\n\nend\n"
+		"suggested" : "\nget '/<span class='golden-text'>articles</span>' do\n\n  @<span class='golden-text'>articles</span> = <span class='g-text-singular'>Article</span>.all #define instance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/index' #shows all <span class='golden-text'>articles</span> view (index)\n\nend\n"
 	},
 	{
 		"type" : "GET",
 
-  	"path" : "'/<span class='golden-text'>articles</span>/new'",
+  		"path" : "'/<span class='golden-text'>articles</span>/new'",
 
-  	"viewFile" : "'/<span class='golden-text'>articles</span>/new'",
+  		"viewFile" : "'/<span class='golden-text'>articles</span>/new'",
 
-  	"description" : "return an HTML form for creating new  <span class='golden-text'>articles</span>",
+  		"description" : "return an HTML form for creating new  <span class='golden-text'>articles</span>",
 
  		"vanilla" : "\nget'/<span class='golden-text'>articles</span>/new' do\n\n  #your code here\n\nend\n",
 
@@ -45,11 +45,11 @@ routes = [
 	{
 		"type" : "POST",
 
-  	"path" : "'/<span class='golden-text'>articles</span>'",
+  		"path" : "'/<span class='golden-text'>articles</span>'",
 
-  	"viewFile" : "'/<span class='golden-text'>articles</span>/create'",
+  		"viewFile" : "'/<span class='golden-text'>articles</span>/create'",
 
-  	"description" : "create new <span class='golden-text'>articles</span>",
+  		"description" : "create new <span class='golden-text'>articles</span>",
 
  		"vanilla" : "\npost '/<span class='golden-text'>articles</span>' do\n\n  #your code here\n\nend\n",
 
@@ -58,11 +58,11 @@ routes = [
 	{
 		"type" : "GET",
 
-  	"path" : "'/<span class='golden-text'>articles</span>/:id'",
+  		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-  	"viewFile" : "'/<span class='golden-text'>articles</span>/show'",
+  		"viewFile" : "'/<span class='golden-text'>articles</span>/show'",
 
-  	"description" : "display specific <span class='golden-text'>articles</span>",
+  		"description" : "display specific <span class='golden-text'>articles</span>",
 
  		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
@@ -71,11 +71,11 @@ routes = [
 	{
 		"type" : "GET",
 
-  	"path" : "'/<span class='golden-text'>articles</span>/:id/edit'",
+  		"path" : "'/<span class='golden-text'>articles</span>/:id/edit'",
 
-  	"viewFile" : "'/<span class='golden-text'>articles</span>/edit'",
+  		"viewFile" : "'/<span class='golden-text'>articles</span>/edit'",
 
-  	"description" : "display page with edit <span class='golden-text'>articles",
+  		"description" : "display page with edit <span class='golden-text'>articles",
 
  		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #your code here\n\nend\n",
 
@@ -84,11 +84,11 @@ routes = [
 	{
 		"type" : "PUT/PATCH",
 
-  	"path" : "'/<span class='golden-text'>articles</span>/:id'",
+  		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-  	"viewFile" : "'/<span class='golden-text'>articles</span>/update'",
+  		"viewFile" : "'/<span class='golden-text'>articles</span>/update'",
 
-  	"description" : "return an HTML form for editing <span class='golden-text'>articles</span>",
+  		"description" : "return an HTML form for editing <span class='golden-text'>articles</span>",
 
  		"vanilla" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
@@ -97,11 +97,11 @@ routes = [
 	{
 		"type" : "DELETE",
 
-  	"path" : "'/<span class='golden-text'>articles</span>/:id'",
+  		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-  	"viewFile" : "'/<span class='golden-text'>articles</span>/destroy'",
+	  	"viewFile" : "'/<span class='golden-text'>articles</span>/destroy'",
 
-  	"description" : "delete specific <span class='golden-text'>articles</span>",
+	  	"description" : "delete specific <span class='golden-text'>articles</span>",
 
  		"vanilla" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
