@@ -92,7 +92,7 @@ routes = [
 
  		"vanilla" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='g-text-s-dc'>article</span> = <span class='g-text-singular'>Article</span>.find(params[:id]) #define variable to edit\n\n  @<span class='g-text-s-dc'>article</span>.assign_attributes(params[:<span class='g-text-s-dc'>article</span>]) #assign new attributes\n\n  if @<span class='g-text-s-dc'>article</span>.save #saves new <span class='g-text-s-dc'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
+		"suggested" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='g-text-s-dc'>article</span> = <span class='g-text-singular'>Article</span>.find(params[:id]) #define variable to edit\n\n  @<span class='g-text-s-dc'>article</span>.assign_attributes(params[:<span class='g-text-s-dc'>article</span>]) #assign new attributes\n\n  if @<span class='g-text-s-dc'>article</span>.save #saves new <span class='g-text-s-dc'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
 	},
 	{
 		"type" : "DELETE",
