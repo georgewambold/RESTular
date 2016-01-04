@@ -18,11 +18,24 @@ $(document).ready(function() {
     });
   });
 
-  $(".submission-box").on("keyup", function() {
-    $(".golden-text").text($(this).val().toLowerCase());    
-    $(".g-text-singular").text(pluralize(capitalize($(this).val()), 1));
-    $(".g-text-s-dc").text((pluralize($(this).val(), 1)));
-  });
+  // $(".submission-box").on("keyup", function() {
+  //   $(".golden-text").text($(this).val().toLowerCase());    
+  //   $(".g-text-singular").text(pluralize(capitalize($(this).val()), 1));
+  //   $(".g-text-s-dc").text((pluralize($(this).val(), 1)));
+  // });
+
+  
+  $(".submission-box").on("keyup", function() { 
+    setGoldenText(this)
+  })
+
+  function setGoldenText(that) {
+    $(".golden-text").text($(that).val().toLowerCase());    
+    $(".g-text-singular").text(pluralize(capitalize($(that).val()), 1));
+    $(".g-text-s-dc").text((pluralize($(that).val(), 1)));
+  }
+
+
 
    $('tr.route').mouseover(function(){
       $(this).addClass('hover');
