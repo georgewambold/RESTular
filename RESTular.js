@@ -1,49 +1,18 @@
 $(document).ready(function() {
 
-  var client = new ZeroClipboard( $(".route-pre") );
-
-  client.on( "ready", function( readyEvent ) {
-    client.on("copy", function(event) {
-      console.log(client);
-      var preData = event.target.innerText;
-      client.setText(preData);
-    })
-    client.on( "aftercopy", function( event ) {
-      $(event.target).siblings(".copy-prompt").text("Copied!");
-      $(event.target).addClass(".on-click")
-      setTimeout(function(){
-        $(event.target).siblings(".copy-prompt").text("^click to copy^");
-        $(event.target).addClass(".on-click");
-      }, 1000);
-    });
-  });
-
-  // $(".submission-box").on("keyup", function() {
-  //   $(".golden-text").text($(this).val().toLowerCase());    
-  //   $(".g-text-singular").text(pluralize(capitalize($(this).val()), 1));
-  //   $(".g-text-s-dc").text((pluralize($(this).val(), 1)));
-  // });
-
-  
   $(".submission-box").on("keyup", function() { 
     setGoldenText(this)
   })
 
-  function setGoldenText(that) {
-    $(".golden-text").text($(that).val().toLowerCase());    
-    $(".g-text-singular").text(pluralize(capitalize($(that).val()), 1));
-    $(".g-text-s-dc").text((pluralize($(that).val(), 1)));
-  }
+  $('tr.route').mouseover(function(){
+    addClassHover(this)
+  });
 
 
 
-   $('tr.route').mouseover(function(){
-      $(this).addClass('hover');
-   });
-        
-   $('tr.route').mouseout(function(){
-      $(this).removeClass('hover');
-   });
+  $('tr.route').mouseout(function(){
+    $(this).removeClass('hover');
+  });
 
 
   $(".route").on("click", function() {
@@ -68,11 +37,38 @@ $(document).ready(function() {
   });
 
 
-});
+  var client = new ZeroClipboard( $(".route-pre") );
 
+  client.on( "ready", function( readyEvent ) {
+    client.on("copy", function(event) {
+      console.log(client);
+      var preData = event.target.innerText;
+      client.setText(preData);
+    })
+    client.on( "aftercopy", function( event ) {
+      $(event.target).siblings(".copy-prompt").text("Copied!");
+      $(event.target).addClass(".on-click")
+      setTimeout(function(){
+        $(event.target).siblings(".copy-prompt").text("^click to copy^");
+        $(event.target).addClass(".on-click");
+      }, 1000);
+    });
+  });
+
+}); //end of (document).ready()
+
+
+function setGoldenText(that) {
+  $(".golden-text").text($(that).val().toLowerCase());    
+  $(".g-text-singular").text(pluralize(capitalize($(that).val()), 1));
+  $(".g-text-s-dc").text((pluralize($(that).val(), 1)));
+}
+
+function addClassHover(that) {
+  $(that).addClass('hover');
+}
 
 function capitalize(string) {
   var lowerCaseString = string.toLowerCase();
-    return lowerCaseString.charAt(0).toUpperCase() + lowerCaseString.slice(1);
+  return lowerCaseString.charAt(0).toUpperCase() + lowerCaseString.slice(1);
 }
-
