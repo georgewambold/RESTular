@@ -1,40 +1,25 @@
 $(document).ready(function() {
 
   $(".submission-box").on("keyup", function() { 
-    setGoldenText(this)
+    setGoldenText(this);
   })
 
   $('tr.route').mouseover(function(){
-    addClassHover(this)
+    addClassHover(this);
   });
-
-
 
   $('tr.route').mouseout(function(){
-    $(this).removeClass('hover');
+    removeClassHover(this);
   });
-
 
   $(".route").on("click", function() {
-    $(this).next().toggle();
-    $(this).toggleClass('in-use');
-    $(this).toggleClass('hover');
-
-    var rand100 = Math.floor(Math.random() * 100)
-    if (rand100 === 69) {
-      $('.sub-box-under').text("Chi Bobolinks 2015!")
-    } //else if (rand100 >= 80) {
-    //   $('.sub-box-under').text("Type something in!")
-    // } else if (rand100 >= 60) {
-    //     $('.sub-box-under').text("Try your own!")
-    // } else if (rand100 >= 40) {
-    //     $('.sub-box-under').text("Rest-a-licious!")
-    // } else if (rand100 >= 20) {
-    //     $('.sub-box-under').text("Rapid Restful Results! (TM)")
-    // } else {
-    //     $('.sub-box-under').text("Kitchen it? Kitchen it.")
-    // }
+    toggleNext(this);
+    toggleTRClass(this);
+    squadLove();
   });
+
+
+//############ ZeroClipboard Nightmare #########################
 
 
   var client = new ZeroClipboard( $(".route-pre") );
@@ -55,8 +40,19 @@ $(document).ready(function() {
     });
   });
 
+
+//################ Thank god that's over ##########################
+
+
 }); //end of (document).ready()
 
+
+//######################## Functions #############################
+
+
+function removeClassHover(that) {
+  $(that).removeClass('hover');
+}
 
 function setGoldenText(that) {
   $(".golden-text").text($(that).val().toLowerCase());    
@@ -66,6 +62,22 @@ function setGoldenText(that) {
 
 function addClassHover(that) {
   $(that).addClass('hover');
+}
+
+function toggleNext(that) {
+  $(that).next().toggle();
+}
+
+function toggleTRClass(that) {
+  $(that).toggleClass('in-use');
+  $(that).toggleClass('hover');
+}
+
+function squadLove() {
+  var rand100 = Math.floor(Math.random() * 100)
+  if (rand100 === 69) {
+    $('.sub-box-under').text("Chi Bobolinks 2015!")
+  }
 }
 
 function capitalize(string) {
