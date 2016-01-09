@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $(".submission-box").on("keyup", function() { 
+  $(".submission-box").on("keyup", function() {
     setGoldenText(this);
   })
 
@@ -24,13 +24,13 @@ $(document).ready(function() {
 
   var client = new ZeroClipboard( $(".route-pre") );
 
-  client.on( "ready", function( readyEvent ) {
+  client.on("ready", function( readyEvent ) {
     client.on("copy", function(event) {
       console.log(client);
       var preData = event.target.innerText;
       client.setText(preData);
     })
-    client.on( "aftercopy", function( event ) {
+    client.on("aftercopy", function( event ) {
       $(event.target).siblings(".copy-prompt").text("Copied!");
       $(event.target).addClass(".on-click")
       setTimeout(function(){
@@ -55,7 +55,7 @@ function removeClassHover(that) {
 }
 
 function setGoldenText(that) {
-  $(".golden-text").text($(that).val().toLowerCase());    
+  $(".golden-text").text($(that).val().toLowerCase());
   $(".g-text-singular").text(pluralize(capitalize($(that).val()), 1));
   $(".g-text-s-dc").text((pluralize($(that).val(), 1)));
 }
