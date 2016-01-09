@@ -63,7 +63,7 @@ function addClassHover(that) {
 }
 
 function toggleNext(that) {
-  $(that).next().toggle();
+  $(that).next().toggle("slow");
 }
 
 function toggleTRClass(that) {
