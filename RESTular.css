@@ -4,7 +4,7 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 header {
@@ -35,18 +35,18 @@ header p {
 
 #golden-form {
 	width: 100%;
-	
+
 	margin-top: 2%;
 }
 
 #golden-form form {
 	margin: auto;
-	width: 600px; 
+	width: 600px;
 }
 
 .submission-box {
-	width: 100%; 
-	height: 2em; 
+	width: 100%;
+	height: 2em;
 	border: 3px solid #CCC;
 	border-radius: 3px;
 }
@@ -67,7 +67,7 @@ header p {
 }
 
 #route-container table th {
-	background: #EEE; 
+	background: #EEE;
 }
 
 #route-container table, th, td {
@@ -98,7 +98,7 @@ header p {
   /*overflow: auto;*/
   white-space: pre;
 }
-.on-click {	
+.on-click {
 border: 2px solid #f4b7b2 ;
 }
 
@@ -120,7 +120,7 @@ border: 2px solid #f4b7b2 ;
 
 
 .in-use {
-	background-color: rgb(255, 249, 216);
+	background-color: #f1938c;
 }
 
 .hover {
@@ -129,6 +129,8 @@ border: 2px solid #f4b7b2 ;
 
 footer {
 	margin-top: 4%;
+	position: fixed;
+	bottom: 0;
 	width: 100%;
 	height: 80px;
 	padding: 1%;
@@ -140,7 +142,7 @@ footer {
 }
 
 footer p {
-	
+
 }
 
 footer p a {
