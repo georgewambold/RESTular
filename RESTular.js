@@ -21,12 +21,11 @@ $(document).ready(function() {
 
 //############ ZeroClipboard Nightmare #########################
 
-
+  ZeroClipboard.config( { swfPath: "https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.swf" } );
   var client = new ZeroClipboard( $(".route-pre") );
 
   client.on("ready", function( readyEvent ) {
     client.on("copy", function(event) {
-      console.log(client);
       var preData = event.target.innerText;
       client.setText(preData);
     })
