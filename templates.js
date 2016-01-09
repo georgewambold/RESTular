@@ -25,7 +25,7 @@ routes = [
 
 	  	"description" : "display a list of all <span class='golden-text'>articles</span>",
 
-	 	"vanilla" : "\nget '/articles' do\n\n  #your code here\n\nend\n",
+	 	"vanilla" : "\nget '/<span class='golden-text'>articles</span>' do\n\n  #your code here\n\nend\n",
 
 		"suggested" : "\nget '/<span class='golden-text'>articles</span>' do\n\n  @<span class='golden-text'>articles</span> = <span class='g-text-singular'>Article</span>.all #define instance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/index' #shows all <span class='golden-text'>articles</span> view (index)\n\nend\n"
 	},
