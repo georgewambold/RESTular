@@ -54,8 +54,8 @@ function removeClassHover(that) {
 
 function setGoldenText(that) {
   $(".golden-text").text($(that).val().toLowerCase());
-  $(".g-text-singular").text(pluralize(capitalize($(that).val()), 1));
-  $(".g-text-s-dc").text((pluralize($(that).val(), 1)));
+  $(".singular-golden-text").text(pluralize(capitalize($(that).val()), 1));
+  $(".singular-downcase-golden-text").text((pluralize($(that).val(), 1)));
 }
 
 function addClassHover(that) {
