@@ -36,7 +36,7 @@ routes = [
 
   		"viewFile" : "'/<span class='golden-text'>articles</span>/new'",
 
-  		"description" : "return an HTML form for creating new  <span class='golden-text'>articles</span>",
+  		"description" : "return a HTML form for creating new  <span class='golden-text'>articles</span>",
 
  		"vanilla" : "\nget'/<span class='golden-text'>articles</span>/new' do\n\n  #your code here\n\nend\n",
 
@@ -53,7 +53,7 @@ routes = [
 
  		"vanilla" : "\npost '/<span class='golden-text'>articles</span>' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\npost '/<span class='golden-text'>articles</span>' do\n\n  #below works with properly formatted params in html form\n  @<span class='g-text-s-dc'>article</span> = <span class='g-text-singular'>Article</span>.new(params[:<span class='g-text-s-dc'>article</span>]) #create new <span class='g-text-s-dc'>article</span>\n\n  if @<span class='g-text-s-dc'>article</span>.save #saves new <span class='g-text-s-dc'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
+		"suggested" : "\npost '/<span class='golden-text'>articles</span>' do\n\n  #below works with properly formatted params in HTML form\n  @<span class='g-text-s-dc'>article</span> = <span class='g-text-singular'>Article</span>.new(params[:<span class='g-text-s-dc'>article</span>]) #create new <span class='g-text-s-dc'>article</span>\n\n  if @<span class='g-text-s-dc'>article</span>.save #saves new <span class='g-text-s-dc'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
 	},
 	{
 		"type" : "GET",
@@ -88,7 +88,7 @@ routes = [
 
   		"viewFile" : "'/<span class='golden-text'>articles</span>/update'",
 
-  		"description" : "return an HTML form for editing <span class='golden-text'>articles</span>",
+  		"description" : "return a HTML form for editing <span class='golden-text'>articles</span>",
 
  		"vanilla" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
