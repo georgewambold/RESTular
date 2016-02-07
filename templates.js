@@ -97,7 +97,7 @@ routes = [
 	{
 		"type" : "POST(DELETE)",
 
-  		"path" : "'/<span class='golden-text'>articles</span>/:id'",
+  		"path" : "'/<span class='golden-text'>articles</span>/:id/delete'",
 
 	  	"viewFile" : "'/<span class='golden-text'>articles</span>/destroy'",
 
