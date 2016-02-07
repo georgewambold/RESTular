@@ -105,6 +105,6 @@ routes = [
 
  		"vanilla" : "\npost '/<span class='golden-text'>articles</span>/:id/delete' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\npost '/<span class='golden-text'>articles</span>/:id/delete' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define <span class='singular-downcase-golden-text'>article</span> to delete\n\n  @<span class='singular-downcase-golden-text'>article</span>.destroy #delete <span class='singular-downcase-golden-text'>article</span>\n\n  redirect '/<span class='golden-text'>articles</span>' #redirects back to teas index page\n\nend\n"
+		"suggested" : "\npost '/<span class='golden-text'>articles</span>/:id/delete' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define <span class='singular-downcase-golden-text'>article</span> to delete\n\n  @<span class='singular-downcase-golden-text'>article</span>.destroy #delete <span class='singular-downcase-golden-text'>article</span>\n\n  redirect '/<span class='golden-text'>articles</span>' #redirects back to <span class='golden-text'>articles</span> index page\n\nend\n"
 	},
 ]
