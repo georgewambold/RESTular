@@ -15,36 +15,39 @@
 	<body>
 		<header>
 			<h1>/REST<span id="second-half">ular</span></h1>
-			<p>A Rails/Sinatra learning tool.</p>
+			<p>A Sinatra routing resource.</p>
 		</header>
-		<div id="golden-form">
-			<form>
-				<input class="submission-box" type="search" name="golden_word" value="articles">
-			</form>
-		</div>
-		<div class="sub-box-under">(Type in your table name and <b>click the table below</b> for full route info)</div>
-		<div id="route-container">
-			<table>
-				<thead>
-					<tr>
-						<th>HTTP Request Type</th>
-						<th>Path</th>
-						<th>View File</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody id="route-body">
+			<div id="wrapper">
+				<div id="golden-form">
+					<form>
+						<input class="submission-box" type="search" name="golden_word" value="articles">
+					</form>
+				</div>
+				<div class="sub-box-under">(Type in your table name and <b>click the table below</b> for full route info)</div>
+				<div id="route-container">
+					<table>
+						<thead>
+							<tr>
+								<th>HTTP Request Type</th>
+								<th>URL Path</th>
+								<th>View File</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody id="route-body">
 
-					<script>
-						for (var i = 0; i < routes.length; i++) {
-							var row = new TableRows(routes[i])
-							$("#route-body").append(row.createRows())
-						}
-					</script>
+							<script>
+								for (var i = 0; i < routes.length; i++) {
+									var row = new TableRows(routes[i])
+									$("#route-body").append(row.createRows())
+								}
+							</script>
 
-				</tbody>
-			</table>
-		</div>
+						</tbody>
+					</table>
+				</div>
+				<div id="push"></div>
+			</div>
 		<footer>
 			<p>Created by George Wambold</p>
 			<p>Find me on <a href="https://github.com/gaw1990">github</a> or <a href="mailto:georgewambold@gmail.com">email me</a>!</p>

@@ -4,6 +4,10 @@ $(document).ready(function() {
     setGoldenText(this);
   })
 
+  $(".submission-box").keydown(function(event){
+    preventDefaultEnterKey(event);
+  });
+
   $('tr.route').mouseover(function(){
     addClassHover(this);
   });
@@ -60,6 +64,12 @@ function setGoldenText(that) {
 
 function addClassHover(that) {
   $(that).addClass('hover');
+}
+
+function preventDefaultEnterKey(event) {
+  if (event.keyCode == 10 || event.keyCode == 13) {
+    event.preventDefault();
+  }
 }
 
 function toggleNext(that) {
