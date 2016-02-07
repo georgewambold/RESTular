@@ -79,7 +79,7 @@ routes = [
 
  		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define intstance variable for view\n\n  erb '<span class='golden-text'>articles</span>/edit' #shows view with edit <span class='singular-downcase-golden-text'>article</span> form\n\nend\n"
+		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define intstance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/edit' #shows view with edit <span class='singular-downcase-golden-text'>article</span> form\n\nend\n"
 	},
 	{
 		"type" : "PUT/PATCH",
