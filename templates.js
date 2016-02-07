@@ -82,7 +82,7 @@ routes = [
 		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define intstance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/edit' #shows view with edit <span class='singular-downcase-golden-text'>article</span> form\n\nend\n"
 	},
 	{
-		"type" : "PUT/PATCH",
+		"type" : "POST(PATCH)",
 
   		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
@@ -90,12 +90,12 @@ routes = [
 
   		"description" : "return a HTML form for editing <span class='golden-text'>articles</span>",
 
- 		"vanilla" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
+ 		"vanilla" : "\npost '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define variable to edit\n\n  @<span class='singular-downcase-golden-text'>article</span>.assign_attributes(params[:<span class='singular-downcase-golden-text'>article</span>]) #assign new attributes\n\n  if @<span class='singular-downcase-golden-text'>article</span>.save #saves new <span class='singular-downcase-golden-text'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
+		"suggested" : "\npost '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define variable to edit\n\n  @<span class='singular-downcase-golden-text'>article</span>.assign_attributes(params[:<span class='singular-downcase-golden-text'>article</span>]) #assign new attributes\n\n  if @<span class='singular-downcase-golden-text'>article</span>.save #saves new <span class='singular-downcase-golden-text'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
 	},
 	{
-		"type" : "DELETE",
+		"type" : "POST(DELETE)",
 
   		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
@@ -103,8 +103,8 @@ routes = [
 
 	  	"description" : "delete specific <span class='golden-text'>articles</span>",
 
- 		"vanilla" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
+ 		"vanilla" : "\npost '/<span class='golden-text'>articles</span>/:id/delete' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define <span class='singular-downcase-golden-text'>article</span> to delete\n\n  @<span class='singular-downcase-golden-text'>article</span>.destroy #delete <span class='singular-downcase-golden-text'>article</span>\n\nend\n"
+		"suggested" : "\npost '/<span class='golden-text'>articles</span>/:id/delete' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define <span class='singular-downcase-golden-text'>article</span> to delete\n\n  @<span class='singular-downcase-golden-text'>article</span>.destroy #delete <span class='singular-downcase-golden-text'>article</span>\n\n  redirect '/<span class='golden-text'>articles</span>' #redirects back to teas index page\n\nend\n"
 	},
 ]
