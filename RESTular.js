@@ -5,10 +5,7 @@ $(document).ready(function() {
   })
 
   $(".submission-box").keydown(function(event){
-
-    if (event.keyCode == 10 || event.keyCode == 13) 
-        event.preventDefault();
-
+    preventDefaultEnterKey(event);
   });
 
   $('tr.route').mouseover(function(){
@@ -67,6 +64,12 @@ function setGoldenText(that) {
 
 function addClassHover(that) {
   $(that).addClass('hover');
+}
+
+function preventDefaultEnterKey(event) {
+  if (event.keyCode == 10 || event.keyCode == 13) {
+    event.preventDefault();
+  }
 }
 
 function toggleNext(that) {
