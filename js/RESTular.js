@@ -8,11 +8,12 @@ $(document).ready(function() {
     preventDefaultEnterKey(event);
   });
 
-  // $("#nested-route").on("keyup", function() {
-  //   setNestedText(this)
-  // });
+  $("#nested-route").on("keyup", function() {
+    nestedKeyUp(this);
+  });
 
-  $('tr.route').mouseover(function(){
+  $('tbody#route-body tr.route').mouseover(function(){
+    console.log("we in this")
     addClassHover(this);
   });
 
@@ -55,6 +56,19 @@ $(document).ready(function() {
 
 //######################## Functions #############################
 
+function nestedKeyUp(that) {
+  if ($(that).val().length >= 1 && trs.singular === true) {
+    trs.appendNestedRows()
+    setNestedText(that)
+    setGoldenText($("#base-route"))
+  } else if ($(that).val().length >= 1) {
+    setNestedText(that)
+    setGoldenText($("#base-route"))
+  } else{
+    trs.appendSingularRows()
+    setGoldenText($("#base-route"))
+  }
+}
 
 function setGoldenText(that) {
   $(".golden-text").text($(that).val().toLowerCase());
@@ -62,29 +76,12 @@ function setGoldenText(that) {
   $(".singular-downcase-golden-text").text((pluralize($(that).val(), 1)));
 }
 
-// function nestedKeyUp(that) {
 
-//   if (that.val.length >= 1) &&  {
-
-//     setNestedText(that)
-
-//   } else {
-
-//     $("#route-body").empty()
-//     for (var i = 0; i < singularRoutes.length; i++) {
-//       var row = new TableRow(singularRoutes[i])
-//       $("#route-body").append(row.createRows())
-//     }
-
-//   }
-
-// }
-
-// function setNestedText(that) {
-//   $(".nested-text").text($(that).val().toLowerCase());
-//   $(".singular-nested-text").text(pluralize(capitalize($(that).val()), 1));
-//   $(".singular-downcase-nested-text").text((pluralize($(that).val(), 1)));
-// }
+function setNestedText(that) {
+  $(".nested-text").text($(that).val().toLowerCase());
+  $(".singular-nested-text").text(pluralize(capitalize($(that).val()), 1));
+  $(".singular-downcase-nested-text").text((pluralize($(that).val(), 1)));
+}
 
 function addClassHover(that) {
   $(that).addClass('hover');

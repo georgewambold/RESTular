@@ -17,6 +17,7 @@ TableRows = function(singularRoutes, nestedRoutes) {
 // }
 
 TableRows.prototype.appendSingularRows = function() { 
+  this.singular = true
   $("#route-body").empty()
   for (var i = 0; i < this.singular_rows.length; i++) {
     $("#route-body").append(this.createRows(this.singular_rows[i]))
@@ -24,6 +25,7 @@ TableRows.prototype.appendSingularRows = function() {
 }
 
 TableRows.prototype.appendNestedRows = function() { 
+  this.singular = false
   $("#route-body").empty()
   for (var i = 0; i < this.nested_rows.length; i++) {
     $("#route-body").append(this.createRows(this.nested_rows[i]))

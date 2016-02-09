@@ -104,7 +104,7 @@ nestedRoutes = [
   {
     "type" : "GET",
 
-    "path" : "'/<span class='golden-text'></span>/<span class='singular-downcase-golden-text'>article</span>_id/<span class='nested-text'></span>'",
+    "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>'",
 
     "viewFile" : "<span class='nested-text'></span>/index",
 
