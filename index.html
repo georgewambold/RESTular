@@ -3,14 +3,15 @@
 	<head>
 		<title>RESTular</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="resources/normalize.css">
-		<link rel="stylesheet" href="RESTular.css">
+		<link rel="stylesheet" href="stylesheets/normalize.css">
+		<link rel="stylesheet" href="stylesheets/RESTular.css">
 		<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
-		<script type="text/javascript" src="resources/ZeroClipboard.js"></script>
+		<script type="text/javascript" src="libraries/ZeroClipboard.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="resources/pluralize.js"></script>
-		<script type="text/javascript" src="RESTular.js"></script>
-		<script type="text/javascript" src="templates.js"></script>
+		<script type="text/javascript" src="libraries/pluralize.js"></script>
+		<script type="text/javascript" src="js/RESTular.js"></script>
+		<script type="text/javascript" src="js/templates.js"></script>
+		<script type="text/javascript" src="js/TableRow.js"></script>
 	</head>
 	<body>
 		<header>
@@ -38,7 +39,7 @@
 
 							<script>
 								for (var i = 0; i < routes.length; i++) {
-									var row = new TableRows(routes[i])
+									var row = new TableRow(routes[i])
 									$("#route-body").append(row.createRows())
 								}
 							</script>
