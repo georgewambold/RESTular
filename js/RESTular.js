@@ -2,11 +2,15 @@ $(document).ready(function() {
 
   $("#base-route").on("keyup", function() {
     setGoldenText(this);
-  })
+  });
 
   $("#base-route").keydown(function(event){
     preventDefaultEnterKey(event);
   });
+
+  // $("#nested-route").on("keyup", function() {
+  //   setNestedText(this)
+  // });
 
   $('tr.route').mouseover(function(){
     addClassHover(this);
@@ -52,18 +56,42 @@ $(document).ready(function() {
 //######################## Functions #############################
 
 
-function removeClassHover(that) {
-  $(that).removeClass('hover');
-}
-
 function setGoldenText(that) {
   $(".golden-text").text($(that).val().toLowerCase());
   $(".singular-golden-text").text(pluralize(capitalize($(that).val()), 1));
   $(".singular-downcase-golden-text").text((pluralize($(that).val(), 1)));
 }
 
+// function nestedKeyUp(that) {
+
+//   if (that.val.length >= 1) &&  {
+
+//     setNestedText(that)
+
+//   } else {
+
+//     $("#route-body").empty()
+//     for (var i = 0; i < singularRoutes.length; i++) {
+//       var row = new TableRow(singularRoutes[i])
+//       $("#route-body").append(row.createRows())
+//     }
+
+//   }
+
+// }
+
+// function setNestedText(that) {
+//   $(".nested-text").text($(that).val().toLowerCase());
+//   $(".singular-nested-text").text(pluralize(capitalize($(that).val()), 1));
+//   $(".singular-downcase-nested-text").text((pluralize($(that).val(), 1)));
+// }
+
 function addClassHover(that) {
   $(that).addClass('hover');
+}
+
+function removeClassHover(that) {
+  $(that).removeClass('hover');
 }
 
 function preventDefaultEnterKey(event) {
