@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="libraries/pluralize.js"></script>
 		<script type="text/javascript" src="js/RESTular.js"></script>
 		<script type="text/javascript" src="js/templates.js"></script>
-		<script type="text/javascript" src="js/TableRow.js"></script>
+		<script type="text/javascript" src="js/TableRows.js"></script>
 	</head>
 	<body>
 		<header>
@@ -39,10 +39,8 @@
 						<tbody id="route-body">
 
 							<script>
-								for (var i = 0; i < singularRoutes.length; i++) {
-									var row = new TableRow(singularRoutes[i])
-									$("#route-body").append(row.createRows())
-								}
+								var tr = new TableRows(singularRoutes, nestedRoutes)
+								tr.appendSingularRows()
 							</script>
 
 						</tbody>
