@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-  $(".submission-box").on("keyup", function() {
+  $("#base-route").on("keyup", function() {
     setGoldenText(this);
   })
 
-  $(".submission-box").keydown(function(event){
+  $("#base-route").keydown(function(event){
     preventDefaultEnterKey(event);
   });
 

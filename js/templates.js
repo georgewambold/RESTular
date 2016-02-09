@@ -1,12 +1,12 @@
 singularRoutes = [
 	{ 
-	  	"type" : "GET",
+  	"type" : "GET",
 
-	  	"path" : "'/<span class='golden-text'>articles</span>'",
+  	"path" : "'/<span class='golden-text'>articles</span>'",
 
-	  	"viewFile" : "'/<span class='golden-text'>articles</span>/index'",
+  	"viewFile" : "'/<span class='golden-text'>articles</span>/index'",
 
-	  	"description" : "display a list of all <span class='golden-text'>articles</span>",
+  	"description" : "display a list of all <span class='golden-text'>articles</span>",
 
 	 	"vanilla" : "\nget '/<span class='golden-text'>articles</span>' do\n\n  #your code here\n\nend\n",
 
@@ -15,11 +15,11 @@ singularRoutes = [
 	{
 		"type" : "GET",
 
-  		"path" : "'/<span class='golden-text'>articles</span>/new'",
+		"path" : "'/<span class='golden-text'>articles</span>/new'",
 
-  		"viewFile" : "'/<span class='golden-text'>articles</span>/new'",
+		"viewFile" : "'/<span class='golden-text'>articles</span>/new'",
 
-  		"description" : "return an HTML form for creating a new <span class='singular-downcase-golden-text'>article</span>",
+		"description" : "return an HTML form for creating a new <span class='singular-downcase-golden-text'>article</span>",
 
  		"vanilla" : "\nget'/<span class='golden-text'>articles</span>/new' do\n\n  #your code here\n\nend\n",
 
@@ -28,11 +28,11 @@ singularRoutes = [
 	{
 		"type" : "POST",
 
-  		"path" : "'/<span class='golden-text'>articles</span>'",
+		"path" : "'/<span class='golden-text'>articles</span>'",
 
-  		"viewFile" : "'/<span class='golden-text'>articles</span>/create'",
+		"viewFile" : "'/<span class='golden-text'>articles</span>/create'",
 
-  		"description" : "create a new <span class='singular-downcase-golden-text'>article</span>",
+		"description" : "create a new <span class='singular-downcase-golden-text'>article</span>",
 
  		"vanilla" : "\npost '/<span class='golden-text'>articles</span>' do\n\n  #your code here\n\nend\n",
 
@@ -41,11 +41,11 @@ singularRoutes = [
 	{
 		"type" : "GET",
 
-  		"path" : "'/<span class='golden-text'>articles</span>/:id'",
+		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-  		"viewFile" : "'/<span class='golden-text'>articles</span>/show'",
+		"viewFile" : "'/<span class='golden-text'>articles</span>/show'",
 
-  		"description" : "display a specific <span class='singular-downcase-golden-text'>article</span>",
+		"description" : "display a specific <span class='singular-downcase-golden-text'>article</span>",
 
  		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
@@ -54,11 +54,11 @@ singularRoutes = [
 	{
 		"type" : "GET",
 
-  		"path" : "'/<span class='golden-text'>articles</span>/:id/edit'",
+		"path" : "'/<span class='golden-text'>articles</span>/:id/edit'",
 
-  		"viewFile" : "'/<span class='golden-text'>articles</span>/edit'",
+		"viewFile" : "'/<span class='golden-text'>articles</span>/edit'",
 
-  		"description" : "return an HTML form for editing a <span class='singular-downcase-golden-text'>article</span>",
+		"description" : "return an HTML form for editing a <span class='singular-downcase-golden-text'>article</span>",
 
  		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #your code here\n\nend\n",
 
@@ -67,11 +67,11 @@ singularRoutes = [
 	{
 		"type" : "PUT",
 
-  		"path" : "'/<span class='golden-text'>articles</span>/:id'",
+		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-  		"viewFile" : "'/<span class='golden-text'>articles</span>/update'",
+		"viewFile" : "'/<span class='golden-text'>articles</span>/update'",
 
-  		"description" : "update a specific <span class='singular-downcase-golden-text'>article</span>",
+		"description" : "update a specific <span class='singular-downcase-golden-text'>article</span>",
 
  		"vanilla" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
@@ -80,14 +80,117 @@ singularRoutes = [
 	{
 		"type" : "DELETE",
 
-  		"path" : "'/<span class='golden-text'>articles</span>/:id/delete'",
+  	"path" : "'/<span class='golden-text'>articles</span>/:id/delete'",
 
-	  	"viewFile" : "'/<span class='golden-text'>articles</span>/destroy'",
+	  "viewFile" : "'/<span class='golden-text'>articles</span>/destroy'",
 
-	  	"description" : "delete a specific <span class='singular-downcase-golden-text'>article</span>",
+	  "description" : "delete a specific <span class='singular-downcase-golden-text'>article</span>",
 
  		"vanilla" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
 		"suggested" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define <span class='singular-downcase-golden-text'>article</span> to delete\n\n  @<span class='singular-downcase-golden-text'>article</span>.destroy #delete <span class='singular-downcase-golden-text'>article</span>\n\n  redirect '/<span class='golden-text'>articles</span>' #redirects back to <span class='golden-text'>articles</span> index page\n\nend\n"
 	},
 ]
+
+// 'teas' = <span class='golden-text'></span>
+// 'tea' = <span class='singular-downcase-golden-text'></span>
+// 'Tea' = <span class='singular-golden-text'></span>
+
+// 'comments' = <span class='nested-text'></span>
+// 'comment' = <span class='singular-downcase-nested-text'></span>
+// 'Comment' = <span class='singular-nested-text'></span>
+
+nestedRoutes = [
+  {
+    "type" : "GET",
+
+    "path" : "'/<span class='golden-text'></span>/<span class='singular-downcase-golden-text'>article</span>_id/<span class='nested-text'></span>'",
+
+    "viewFile" : "<span class='nested-text'></span>/index",
+
+    "description" : "display a list of all <span class='nested-text'></span> for a specific <span class='singular-downcase-golden-text'></span>",
+
+    "vanilla" : "",
+
+    "suggested" : ""
+  },
+  {
+    "type" : "GET",
+
+    "path" : "'/<span class='golden-text'></span>'",
+
+    "viewFile" : "",
+
+    "description" : "",
+
+    "vanilla" : "",
+
+    "suggested" : ""
+  },
+  {
+    "type" : "POST",
+
+    "path" : "'/<span class='golden-text'></span>'",
+
+    "viewFile" : "",
+
+    "description" : "",
+
+    "vanilla" : "",
+
+    "suggested" : ""
+  },
+  {
+    "type" : "GET",
+
+    "path" : "'/<span class='golden-text'></span>'",
+
+    "viewFile" : "",
+
+    "description" : "",
+
+    "vanilla" : "",
+
+    "suggested" : ""
+  },
+  {
+    "type" : "GET",
+
+    "path" : "'/<span class='golden-text'></span>'",
+
+    "viewFile" : "",
+
+    "description" : "",
+
+    "vanilla" : "",
+
+    "suggested" : ""
+  },
+  {
+    "type" : "PATCH",
+
+    "path" : "'/<span class='golden-text'></span>'",
+
+    "viewFile" : "",
+
+    "description" : "",
+
+    "vanilla" : "",
+
+    "suggested" : ""
+  },
+  {
+    "type" : "DELETE",
+
+    "path" : "'/<span class='golden-text'></span>'",
+
+    "viewFile" : "",
+
+    "description" : "",
+
+    "vanilla" : "",
+
+    "suggested" : ""
+  }
+]
+
