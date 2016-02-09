@@ -1,4 +1,4 @@
-routes = [
+singularRoutes = [
 	{ 
 	  	"type" : "GET",
 
