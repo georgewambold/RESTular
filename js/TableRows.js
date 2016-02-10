@@ -2,19 +2,7 @@ TableRows = function(singularRoutes, nestedRoutes) {
   this.singular_rows = singularRoutes
   this.nested_rows = nestedRoutes
   this.singular = true
-  // this.type = object["type"];
-  // this.path = object["path"];
-  // this.viewFile = object["viewFile"];
-  // this.description = object["description"];
-  // this.vanilla = object["vanilla"];
-  // this.suggested = object["suggested"];
 }
-
-
-// for (var i = 0; i < singularRoutes.length; i++) {
-//   var row = new TableRow(singularRoutes[i])
-//   $("#route-body").append(row.createRows())
-// }
 
 TableRows.prototype.appendSingularRows = function() { 
   this.singular = true
@@ -31,8 +19,6 @@ TableRows.prototype.appendNestedRows = function() {
     $("#route-body").append(this.createRows(this.nested_rows[i]))
   }
 }
-
-
 
 TableRows.prototype.createRows = function(object) {
   

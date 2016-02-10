@@ -12,16 +12,16 @@ $(document).ready(function() {
     nestedKeyUp(this);
   });
 
-  $('tbody#route-body tr.route').mouseover(function(){
+  $('#route-body').on('mouseover', 'tr.route', function(){
     console.log("we in this")
     addClassHover(this);
   });
 
-  $('tr.route').mouseout(function(){
+  $('#route-body').on('mouseout', 'tr.route', function(){
     removeClassHover(this);
   });
 
-  $(".route").on("click", function() {
+  $('#route-body').on("click", "tr.route", function() {
     toggleNext(this);
     toggleTRClass(this);
     squadLove();
