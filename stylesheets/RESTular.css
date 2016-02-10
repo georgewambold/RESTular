@@ -38,10 +38,6 @@ header p {
 	margin-top: 2%;
 }
 
-#golden-form form {
-	margin: auto;
-	width: 600px;
-}
 
 .submission-box {
 	width: 100%;
@@ -129,6 +125,26 @@ border: 2px solid #f4b7b2 ;
 	min-height: 100%;
   height: auto !important;
   margin: 0 auto;
+}
+
+#golden-form {
+	text-align: center;
+}
+
+#resource-input {
+	margin: auto;
+	width: 100%;
+}
+
+#nested-route {
+	border: solid .1em grey;
+	height: 2em;
+	box-shadow: .5px .5px 2px #707070;
+}
+#base-route {
+	border: solid .1em grey;
+	height: 2em;
+	box-shadow: .5px .5px 1px #707070;
 }
 
 footer {
