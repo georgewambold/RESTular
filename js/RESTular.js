@@ -68,7 +68,7 @@ function nestedKeyUp(that) {
   } else{
     trs.appendSingularRows()
     setGoldenText($("#base-route"))
-    setZeroClipboard
+    setZeroClipboard()
   }
 }
 
