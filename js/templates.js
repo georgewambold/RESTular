@@ -80,7 +80,7 @@ singularRoutes = [
 	{
 		"type" : "DELETE",
 
-  	"path" : "'/<span class='golden-text'>articles</span>/:id/delete'",
+  	"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
 	  "viewFile" : "/<span class='golden-text'>articles</span>/destroy",
 
