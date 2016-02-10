@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 //############ ZeroClipboard Nightmare #########################
 
-  setZeroClipboard();
+  var client = new ZeroClipboard( $(".route-pre") );
 
   client.on("ready", function( readyEvent ) {
     client.on("copy", function(event) {
@@ -56,24 +56,22 @@ $(document).ready(function() {
 //######################## Functions #############################
 
 
+function setZeroClipboard() {
+  var client = new ZeroClipboard( $(".route-pre") );
+}
+
 function nestedKeyUp(that) {
   if ($(that).val().length >= 1 && trs.singular === true) {
     trs.appendNestedRows()
     setNestedText(that)
     setGoldenText($("#base-route"))
-    setZeroClipboard()
   } else if ($(that).val().length >= 1) {
     setNestedText(that)
     setGoldenText($("#base-route"))
   } else{
     trs.appendSingularRows()
     setGoldenText($("#base-route"))
-    setZeroClipboard()
   }
-}
-
-function setZeroClipboard() {
-  var client = new ZeroClipboard( $(".route-pre") );
 }
 
 function setGoldenText(that) {
