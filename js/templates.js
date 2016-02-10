@@ -30,7 +30,7 @@ singularRoutes = [
 
 		"path" : "'/<span class='golden-text'>articles</span>'",
 
-		"viewFile" : "/<span class='golden-text'>articles</span>/create",
+		"viewFile" : "--",
 
 		"description" : "create a new <span class='singular-downcase-golden-text'>article</span>",
 
@@ -69,7 +69,7 @@ singularRoutes = [
 
 		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-		"viewFile" : "/<span class='golden-text'>articles</span>/update",
+		"viewFile" : "--",
 
 		"description" : "update a specific <span class='singular-downcase-golden-text'>article</span>",
 
@@ -82,7 +82,7 @@ singularRoutes = [
 
   	"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-	  "viewFile" : "/<span class='golden-text'>articles</span>/destroy",
+	  "viewFile" : "--",
 
 	  "description" : "delete a specific <span class='singular-downcase-golden-text'>article</span>",
 
@@ -132,7 +132,7 @@ nestedRoutes = [
 
     "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>'",
 
-    "viewFile" : "<span class='nested-text'></span>/create",
+    "viewFile" : "--",
 
     "description" : "create a new <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
 
@@ -171,7 +171,7 @@ nestedRoutes = [
 
     "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id'",
 
-    "viewFile" : "<span class='nested-text'></span>/update",
+    "viewFile" : "--",
 
     "description" : "update a specific <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
 
@@ -184,7 +184,7 @@ nestedRoutes = [
 
     "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id'",
 
-    "viewFile" : "<span class='nested-text'></span>/destroy",
+    "viewFile" : "--",
 
     "description" : "delete a specific <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
 
