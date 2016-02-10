@@ -11,7 +11,7 @@ header {
 	text-shadow: 0 0 1px rgba(0,0,0,0.3);
 	text-align: left;
 	padding-left: 12%;
-	height: 119px;
+	height: 8em;
 	width: 100%;
 	background: #c52f24;
 	padding-top: 5px;
@@ -38,10 +38,6 @@ header p {
 	margin-top: 2%;
 }
 
-#golden-form form {
-	margin: auto;
-	width: 600px;
-}
 
 .submission-box {
 	width: 100%;
@@ -79,6 +75,7 @@ header p {
 
 .route td {
 	min-width: 150px;
+	max-width: 300px;
 	text-align: left;
 }
 
@@ -90,7 +87,7 @@ header p {
 	height: 100px;
 }
 
-.route-info pre{
+.route-info pre {
   background-color: #f7f7f7;
   font-family: monospace;
   white-space: pre;
@@ -128,6 +125,26 @@ border: 2px solid #f4b7b2 ;
 	min-height: 100%;
   height: auto !important;
   margin: 0 auto;
+}
+
+#golden-form {
+	text-align: center;
+}
+
+#resource-input {
+	margin: auto;
+	width: 100%;
+}
+
+#nested-route {
+	border: solid .1em grey;
+	height: 2em;
+	box-shadow: .5px .5px 2px #707070;
+}
+#base-route {
+	border: solid .1em grey;
+	height: 2em;
+	box-shadow: .5px .5px 1px #707070;
 }
 
 footer {
