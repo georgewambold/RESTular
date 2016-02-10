@@ -151,7 +151,7 @@ nestedRoutes = [
 
     "vanilla" : "\nget '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  #your code here\n\nend\n",
 
-    "suggested" : "get '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do \n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = <span class='singular-nested-text'></span>.find(params[:id])\n\n  erb :'<span class='nested-text'></span>/show'\n\nend"
+    "suggested" : "get '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do \n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = @<span class='singular-downcase-golden-text'></span>.<span class='nested-text'></span>.find(params[:id])\n\n  erb :'<span class='nested-text'></span>/show'\n\nend"
   },
   {
     "type" : "GET",
@@ -164,7 +164,7 @@ nestedRoutes = [
 
     "vanilla" : "\n get '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id/edit' do\n\n  #your code here\n\nend\n",
 
-    "suggested" : "get '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id/edit' do\n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = <span class='singular-nested-text'></span>.find(params[:id])\n\n  erb :'<span class='nested-text'></span>/edit'\n\nend"
+    "suggested" : "get '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id/edit' do\n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = @<span class='singular-downcase-golden-text'></span>.<span class='nested-text'></span>.find(params[:id])\n\n  erb :'<span class='nested-text'></span>/edit'\n\nend"
   },
   {
     "type" : "PUT",
@@ -177,7 +177,7 @@ nestedRoutes = [
 
     "vanilla" : "\n put '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  #your code here\n\nend\n",
 
-    "suggested" : "put '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = <span class='singular-nested-text'></span>.find(params[:id])\n\n  if @<span class='singular-downcase-nested-text'></span>.update_attributes(params[:<span class='singular-downcase-nested-text'></span>])\n    redirect \"/<span class='golden-text'></span>/#{@<span class='singular-downcase-golden-text'></span>.id}/<span class='nested-text'></span>\"\n  else \n    erb :'<span class='nested-text'></span>/edit'\n  end\n\nend"
+    "suggested" : "put '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = @<span class='singular-downcase-golden-text'></span>.<span class='nested-text'></span>.find(params[:id])\n\n  if @<span class='singular-downcase-nested-text'></span>.update_attributes(params[:<span class='singular-downcase-nested-text'></span>])\n    redirect \"/<span class='golden-text'></span>/#{@<span class='singular-downcase-golden-text'></span>.id}/<span class='nested-text'></span>\"\n  else \n    erb :'<span class='nested-text'></span>/edit'\n  end\n\nend"
   },
   {
     "type" : "DELETE",
@@ -190,7 +190,7 @@ nestedRoutes = [
 
     "vanilla" : "delete '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  #your code here\n\nend\n",
 
-    "suggested" : "delete '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do \n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = <span class='singular-nested-text'></span>.find(params[:id])\n\n  @<span class='singular-downcase-nested-text'></span>.destroy\n\n  redirect \"/<span class='golden-text'></span>/#{@<span class='singular-downcase-golden-text'></span>.id}/<span class='nested-text'></span>\"\n\nend"
+    "suggested" : "delete '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do \n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = @<span class='singular-downcase-golden-text'></span>.<span class='nested-text'></span>.find(params[:id])\n\n  @<span class='singular-downcase-nested-text'></span>.destroy\n\n  redirect \"/<span class='golden-text'></span>/#{@<span class='singular-downcase-golden-text'></span>.id}/<span class='nested-text'></span>\"\n\nend"
   }
 ]
 
