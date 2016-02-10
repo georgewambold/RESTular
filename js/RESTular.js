@@ -55,23 +55,24 @@ $(document).ready(function() {
 
 //######################## Functions #############################
 
-
-function setZeroClipboard() {
-  var client = new ZeroClipboard( $(".route-pre") );
-}
-
 function nestedKeyUp(that) {
   if ($(that).val().length >= 1 && trs.singular === true) {
     trs.appendNestedRows()
     setNestedText(that)
     setGoldenText($("#base-route"))
+    setZeroClipboard()
   } else if ($(that).val().length >= 1) {
     setNestedText(that)
     setGoldenText($("#base-route"))
   } else{
     trs.appendSingularRows()
     setGoldenText($("#base-route"))
+    setZeroClipboard()
   }
+}
+
+function setZeroClipboard() {
+  client.clip( $(".route-pre") );
 }
 
 function setGoldenText(that) {
