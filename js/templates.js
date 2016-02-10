@@ -4,7 +4,7 @@ singularRoutes = [
 
   	"path" : "'/<span class='golden-text'>articles</span>'",
 
-  	"viewFile" : "'/<span class='golden-text'>articles</span>/index'",
+  	"viewFile" : "/<span class='golden-text'>articles</span>/index",
 
   	"description" : "display a list of all <span class='golden-text'>articles</span>",
 
@@ -17,7 +17,7 @@ singularRoutes = [
 
 		"path" : "'/<span class='golden-text'>articles</span>/new'",
 
-		"viewFile" : "'/<span class='golden-text'>articles</span>/new'",
+		"viewFile" : "/<span class='golden-text'>articles</span>/new",
 
 		"description" : "return an HTML form for creating a new <span class='singular-downcase-golden-text'>article</span>",
 
@@ -30,7 +30,7 @@ singularRoutes = [
 
 		"path" : "'/<span class='golden-text'>articles</span>'",
 
-		"viewFile" : "'/<span class='golden-text'>articles</span>/create'",
+		"viewFile" : "/<span class='golden-text'>articles</span>/create",
 
 		"description" : "create a new <span class='singular-downcase-golden-text'>article</span>",
 
@@ -43,7 +43,7 @@ singularRoutes = [
 
 		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-		"viewFile" : "'/<span class='golden-text'>articles</span>/show'",
+		"viewFile" : "/<span class='golden-text'>articles</span>/show",
 
 		"description" : "display a specific <span class='singular-downcase-golden-text'>article</span>",
 
@@ -56,7 +56,7 @@ singularRoutes = [
 
 		"path" : "'/<span class='golden-text'>articles</span>/:id/edit'",
 
-		"viewFile" : "'/<span class='golden-text'>articles</span>/edit'",
+		"viewFile" : "/<span class='golden-text'>articles</span>/edit",
 
 		"description" : "return an HTML form for editing a <span class='singular-downcase-golden-text'>article</span>",
 
@@ -69,7 +69,7 @@ singularRoutes = [
 
 		"path" : "'/<span class='golden-text'>articles</span>/:id'",
 
-		"viewFile" : "'/<span class='golden-text'>articles</span>/update'",
+		"viewFile" : "/<span class='golden-text'>articles</span>/update",
 
 		"description" : "update a specific <span class='singular-downcase-golden-text'>article</span>",
 
@@ -82,7 +82,7 @@ singularRoutes = [
 
   	"path" : "'/<span class='golden-text'>articles</span>/:id/delete'",
 
-	  "viewFile" : "'/<span class='golden-text'>articles</span>/destroy'",
+	  "viewFile" : "/<span class='golden-text'>articles</span>/destroy",
 
 	  "description" : "delete a specific <span class='singular-downcase-golden-text'>article</span>",
 
@@ -110,85 +110,85 @@ nestedRoutes = [
 
     "description" : "display a list of all <span class='nested-text'></span> for a specific <span class='singular-downcase-golden-text'></span>",
 
-    "vanilla" : "",
+    "vanilla" : "\nget '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>' do\n\n  #your code here\n\nend\n",
 
     "suggested" : ""
   },
   {
     "type" : "GET",
 
-    "path" : "'/<span class='golden-text'></span>'",
+    "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/new'",
 
-    "viewFile" : "",
+    "viewFile" : "<span class='nested-text'></span>/new",
 
-    "description" : "",
+    "description" : "return an HTML form for creating a new <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
 
-    "vanilla" : "",
+    "vanilla" : "\nget '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/new' do\n\n  #your code here\n\nend\n",
 
     "suggested" : ""
   },
   {
     "type" : "POST",
 
-    "path" : "'/<span class='golden-text'></span>'",
+    "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>'",
 
-    "viewFile" : "",
+    "viewFile" : "<span class='nested-text'></span>/create",
 
-    "description" : "",
+    "description" : "create a new <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
 
-    "vanilla" : "",
-
-    "suggested" : ""
-  },
-  {
-    "type" : "GET",
-
-    "path" : "'/<span class='golden-text'></span>'",
-
-    "viewFile" : "",
-
-    "description" : "",
-
-    "vanilla" : "",
+    "vanilla" : "\npost '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>' do\n\n  #your code here\n\nend\n",
 
     "suggested" : ""
   },
   {
     "type" : "GET",
 
-    "path" : "'/<span class='golden-text'></span>'",
+    "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id'",
 
-    "viewFile" : "",
+    "viewFile" : "<span class='nested-text'></span>/show",
 
-    "description" : "",
+    "description" : "display a specific <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
 
-    "vanilla" : "",
+    "vanilla" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  #your code here\n\nend\n",
+
+    "suggested" : ""
+  },
+  {
+    "type" : "GET",
+
+    "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id/edit'",
+
+    "viewFile" : "<span class='nested-text'></span>/edit",
+
+    "description" : "return an HTML form for editing an <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
+
+    "vanilla" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id/edit' do\n\n  #your code here\n\nend\n",
 
     "suggested" : ""
   },
   {
     "type" : "PATCH",
 
-    "path" : "'/<span class='golden-text'></span>'",
+    "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id'",
 
-    "viewFile" : "",
+    "viewFile" : "<span class='nested-text'></span>/update",
 
-    "description" : "",
+    "description" : "update a specific <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
 
-    "vanilla" : "",
+    "vanilla" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  #your code here\n\nend\n",
 
     "suggested" : ""
   },
   {
     "type" : "DELETE",
 
-    "path" : "'/<span class='golden-text'></span>'",
+    "path" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id'",
 
-    "viewFile" : "",
+    "viewFile" : "<span class='nested-text'></span>/destroy",
 
-    "description" : "",
+    "description" : "delete a specific <span class='singular-downcase-nested-text'></span> belonging to a specific <span class='singular-downcase-golden-text'></span>",
 
-    "vanilla" : "",
+    "vanilla" : "'/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  #your code here\n\nend\n",
 
     "suggested" : ""
   }

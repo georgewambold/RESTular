@@ -4,7 +4,7 @@ $(document).ready(function() {
     setGoldenText(this);
   });
 
-  $("#base-route").keydown(function(event){
+  $("#base-route").on("keydown", function(event){
     preventDefaultEnterKey(event);
   });
 
@@ -13,7 +13,6 @@ $(document).ready(function() {
   });
 
   $('#route-body').on('mouseover', 'tr.route', function(){
-    console.log("we in this")
     addClassHover(this);
   });
 
