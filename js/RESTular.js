@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 //############ ZeroClipboard Nightmare #########################
 
-  var client = new ZeroClipboard( $(".route-pre") );
+  client = new ZeroClipboard( $(".route-pre") );
 
   client.on("ready", function( readyEvent ) {
     client.on("copy", function(event) {
