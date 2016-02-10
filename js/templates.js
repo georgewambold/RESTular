@@ -164,7 +164,7 @@ nestedRoutes = [
 
     "vanilla" : "\n get '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id/edit' do\n\n  #your code here\n\nend\n",
 
-    "suggested" : "get '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id/edit' do\n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n  @<span class='singular-downcase-nested-text'></span> = <span class='singular-nested-text'></span>.find(params[:id])\n\n  erb :'<span class='nested-text'></span>/edit'\n\nend"
+    "suggested" : "get '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id/edit' do\n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = <span class='singular-nested-text'></span>.find(params[:id])\n\n  erb :'<span class='nested-text'></span>/edit'\n\nend"
   },
   {
     "type" : "PUT",
