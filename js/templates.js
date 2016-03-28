@@ -10,7 +10,7 @@ singularRoutes = [
 
 	 	"vanilla" : "\nget '/<span class='golden-text'>articles</span>' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nget '/<span class='golden-text'>articles</span>' do\n\n  @<span class='golden-text'>articles</span> = <span class='singular-golden-text'>Article</span>.all #define instance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/index' #shows all <span class='golden-text'>articles</span> view (index)\n\nend\n"
+		"suggested" : "\nget '/<span class='golden-text'>articles</span>' do\n\n  @<span class='golden-text'>articles</span> = <span class='singular-golden-text'>Article</span>.all #define instance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/index' #show all <span class='golden-text'>articles</span> view (index)\n\nend\n"
 	},
 	{
 		"type" : "GET",
@@ -23,7 +23,7 @@ singularRoutes = [
 
  		"vanilla" : "\nget'/<span class='golden-text'>articles</span>/new' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nget '/<span class='golden-text'>articles</span>/new' do\n\n  erb :'<span class='golden-text'>articles</span>/new' #shows view with new <span class='golden-text'>articles</span> form\n\nend\n"
+		"suggested" : "\nget '/<span class='golden-text'>articles</span>/new' do\n\n  erb :'<span class='golden-text'>articles</span>/new' #show new <span class='golden-text'>articles</span> view\n\nend\n"
 	},
 	{
 		"type" : "POST",
@@ -36,7 +36,7 @@ singularRoutes = [
 
  		"vanilla" : "\npost '/<span class='golden-text'>articles</span>' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\npost '/<span class='golden-text'>articles</span>' do\n\n  #below works with properly formatted params in HTML form\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.new(params[:<span class='singular-downcase-golden-text'>article</span>]) #create new <span class='singular-downcase-golden-text'>article</span>\n\n  if @<span class='singular-downcase-golden-text'>article</span>.save #saves new <span class='singular-downcase-golden-text'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
+		"suggested" : "\npost '/<span class='golden-text'>articles</span>' do\n\n  #below works with properly formatted params in HTML form\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.new(params[:<span class='singular-downcase-golden-text'>article</span>]) #create new <span class='singular-downcase-golden-text'>article</span>\n\n  if @<span class='singular-downcase-golden-text'>article</span>.save #saves new <span class='singular-downcase-golden-text'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #redirect back to <span class='golden-text'>articles</span> index page\n  else\n    erb :'<span class='golden-text'>articles</span>/new' # show new <span class='golden-text'>articles</span> view again(letting you display errors)\n  end\n\nend\n"
 	},
 	{
 		"type" : "GET",
@@ -49,7 +49,7 @@ singularRoutes = [
 
  		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id' do\n\n  #gets params from url\n\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define instance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/show' #shows single <span class='singular-downcase-golden-text'>article</span> view\n\nend\n"
+		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id' do\n\n  #gets params from url\n\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define instance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/show' #show single <span class='singular-downcase-golden-text'>article</span> view\n\nend\n"
 	},
 	{
 		"type" : "GET",
@@ -62,7 +62,7 @@ singularRoutes = [
 
  		"vanilla" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define intstance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/edit' #shows view with edit <span class='singular-downcase-golden-text'>article</span> form\n\nend\n"
+		"suggested" : "\nget '/<span class='golden-text'>articles</span>/:id/edit' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define intstance variable for view\n\n  erb :'<span class='golden-text'>articles</span>/edit' #show edit <span class='singular-downcase-golden-text'>article</span> view\n\nend\n"
 	},
 	{
 		"type" : "PUT",
@@ -75,7 +75,7 @@ singularRoutes = [
 
  		"vanilla" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define variable to edit\n\n  @<span class='singular-downcase-golden-text'>article</span>.assign_attributes(params[:<span class='singular-downcase-golden-text'>article</span>]) #assign new attributes\n\n  if @<span class='singular-downcase-golden-text'>article</span>.save #saves new <span class='singular-downcase-golden-text'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #links back to <span class='golden-text'>articles</span> index page\n  else\n    erb :errors #shows an errors view you define\n  end\n\nend\n"
+		"suggested" : "\nput '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define variable to edit\n\n  @<span class='singular-downcase-golden-text'>article</span>.assign_attributes(params[:<span class='singular-downcase-golden-text'>article</span>]) #assign new attributes\n\n  if @<span class='singular-downcase-golden-text'>article</span>.save #saves new <span class='singular-downcase-golden-text'>article</span> or returns false if unsuccessful\n    redirect '/<span class='golden-text'>articles</span>' #redirect back to <span class='golden-text'>articles</span> index page\n  else\n    erb :'<span class='golden-text'>articles</span>/edit' #show edit <span class='singular-downcase-golden-text'>article</span> view again(letting you display errors)\n  end\n\nend\n"
 	},
 	{
 		"type" : "DELETE",
@@ -88,7 +88,7 @@ singularRoutes = [
 
  		"vanilla" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #your code here\n\nend\n",
 
-		"suggested" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define <span class='singular-downcase-golden-text'>article</span> to delete\n\n  @<span class='singular-downcase-golden-text'>article</span>.destroy #delete <span class='singular-downcase-golden-text'>article</span>\n\n  redirect '/<span class='golden-text'>articles</span>' #redirects back to <span class='golden-text'>articles</span> index page\n\nend\n"
+		"suggested" : "\ndelete '/<span class='golden-text'>articles</span>/:id' do\n\n  #get params from url\n  @<span class='singular-downcase-golden-text'>article</span> = <span class='singular-golden-text'>Article</span>.find(params[:id]) #define <span class='singular-downcase-golden-text'>article</span> to delete\n\n  @<span class='singular-downcase-golden-text'>article</span>.destroy #delete <span class='singular-downcase-golden-text'>article</span>\n\n  redirect '/<span class='golden-text'>articles</span>' #redirect back to <span class='golden-text'>articles</span> index page\n\nend\n"
 	},
 ]
 
@@ -138,7 +138,7 @@ nestedRoutes = [
 
     "vanilla" : "\npost '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>' do\n\n  #your code here\n\nend\n",
 
-    "suggested" : "post '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>' do \n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = @<span class='singular-downcase-golden-text'></span>.<span class='nested-text'></span>.new(params[:<span class='singular-downcase-nested-text'></span>])\n\n  if <span class='singular-downcase-nested-text'></span>.save\n    redirect \"/<span class='golden-text'></span>/#{@<span class='singular-downcase-golden-text'></span>.id}/<span class='nested-text'></span>\"\n  else\n    erb :'<span class='nested-text'></span>/new'\n  end\n\nend"
+    "suggested" : "post '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>' do \n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = @<span class='singular-downcase-golden-text'></span>.<span class='nested-text'></span>.new(params[:<span class='singular-downcase-nested-text'></span>])\n\n  if @<span class='singular-downcase-nested-text'></span>.save\n    redirect \"/<span class='golden-text'></span>/#{@<span class='singular-downcase-golden-text'></span>.id}/<span class='nested-text'></span>\"\n  else\n    erb :'<span class='nested-text'></span>/new' #show new <span class='nested-text'></span> view again(letting you display errors)\n  end\n\nend"
   },
   {
     "type" : "GET",
@@ -177,7 +177,7 @@ nestedRoutes = [
 
     "vanilla" : "\n put '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  #your code here\n\nend\n",
 
-    "suggested" : "put '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = @<span class='singular-downcase-golden-text'></span>.<span class='nested-text'></span>.find(params[:id])\n\n  if @<span class='singular-downcase-nested-text'></span>.update_attributes(params[:<span class='singular-downcase-nested-text'></span>])\n    redirect \"/<span class='golden-text'></span>/#{@<span class='singular-downcase-golden-text'></span>.id}/<span class='nested-text'></span>\"\n  else \n    erb :'<span class='nested-text'></span>/edit'\n  end\n\nend"
+    "suggested" : "put '/<span class='golden-text'></span>/:<span class='singular-downcase-golden-text'></span>_id/<span class='nested-text'></span>/:id' do\n\n  @<span class='singular-downcase-golden-text'></span> = <span class='singular-golden-text'></span>.find(params[:<span class='singular-downcase-golden-text'></span>_id])\n\n  @<span class='singular-downcase-nested-text'></span> = @<span class='singular-downcase-golden-text'></span>.<span class='nested-text'></span>.find(params[:id])\n\n  if @<span class='singular-downcase-nested-text'></span>.update_attributes(params[:<span class='singular-downcase-nested-text'></span>])\n    redirect \"/<span class='golden-text'></span>/#{@<span class='singular-downcase-golden-text'></span>.id}/<span class='nested-text'></span>\"\n  else \n    erb :'<span class='nested-text'></span>/edit' #show edit <span class='nested-text'></span> view again(letting you display errors)\n  end\n\nend"
   },
   {
     "type" : "DELETE",
