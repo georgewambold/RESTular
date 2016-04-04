@@ -27,7 +27,7 @@ $(document).ready(function() {
   });
 
 
-//############ ZeroClipboard Nightmare #########################
+//############ ZeroClipboard #########################
 
   client = new ZeroClipboard( $(".route-pre") );
 
@@ -45,10 +45,6 @@ $(document).ready(function() {
       }, 1000);
     });
   });
-
-
-//################ Thank god that's over ##########################
-
 
 }); //end of (document).ready()
 
@@ -113,7 +109,7 @@ function toggleTRClass(that) {
 
 function squadLove() {
   var rand100 = Math.floor(Math.random() * 100)
-  if (rand100 === 69) {
+  if (rand100 === 50) {
     $('.sub-box-under').text("Chi Bobolinks 2015!")
   }
 }
