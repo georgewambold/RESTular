@@ -5,15 +5,19 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="stylesheets/normalize.css">
 		<link rel="stylesheet" href="stylesheets/RESTular.css">
+		<script type="text/javascript" src="libraries/pluralize.js"></script>
 		<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
 		<script type="text/javascript" src="libraries/ZeroClipboard.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="libraries/pluralize.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+		<script src="https://cdn.rawgit.com/dreamerslab/node.inflection/master/inflection.min.js"></script>
+		<script src="http://konsumer.github.io/ngInflection/dist/ngInflection.min.js"></script>
 		<script type="text/javascript" src="js/RESTular.js"></script>
+		<script type="text/javascript" src="js/restularApp.js"></script>
 		<script type="text/javascript" src="js/templates.js"></script>
 		<script type="text/javascript" src="js/TableRows.js"></script>
 	</head>
-	<body>
+	<body ng-app="Restular" ng-controller="TableCtrl">
 		<header>
 			<h1>/REST<span id="second-half">ular</span></h1>
 			<p>A Sinatra routing resource.</p>
@@ -21,8 +25,8 @@
 			<div id="wrapper">
 				<div id="golden-form">
 					<form id="resource-input">
-						<input id="base-route" size="50" value="articles">
-						<input id="nested-route" placeholder="(nested resource)">
+						<input ng-model="resource" id="base-route" size="50" value="articles">
+						<input ng-model="nestedResource" id="nested-route" placeholder="(nested resource)">
 					</form>
 				</div>
 				<div class="sub-box-under">(Type in your table names and <b>click the table below</b> for full route info)</div>
@@ -37,11 +41,13 @@
 							</tr>
 						</thead>
 						<tbody id="route-body">
-
-							<script>
-							  trs = new TableRows(singularRoutes, nestedRoutes)
-								trs.appendSingularRows()
-							</script>
+							<p>plurarl downcase resource : {{resource | lowercase | pluralize}}</p>
+							<p>singular propercase resource : {{resource | titleize}}</p>
+							<p>singular downcase resource : {{resource | lowercase | singularize }}</p>
+							
+							<p>plurarl downcase nested resource : {{nestedResource | lowercase | pluralize}}</p>
+							<p>singular propercase nested resource : {{nestedResource | titleize}}</p>
+							<p>singular downcase nested resource : {{nestedResource | lowercase | singularize }}</p>
 
 						</tbody>
 					</table>
