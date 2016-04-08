@@ -25,7 +25,7 @@
 			<div id="wrapper">
 				<div id="golden-form">
 					<form id="resource-input">
-						<input ng-model="resource" id="base-route" size="50" value="articles">
+						<input ng-model="resourceInput" id="base-route" size="50" value="articles">
 						<input ng-model="nestedResource" id="nested-route" placeholder="(nested resource)">
 					</form>
 				</div>
@@ -41,14 +41,23 @@
 							</tr>
 						</thead>
 						<tbody id="route-body">
-							<p>plurarl downcase resource : {{resource | lowercase | pluralize}}</p>
-							<p>singular propercase resource : {{resource | titleize}}</p>
-							<p>singular downcase resource : {{resource | lowercase | singularize }}</p>
+						
+							<p>singular downcase resource : {{ singularDowncaseResource }}</p>
+							<p>singular propercase resource : {{ singularPropercaseResource }}</p>
+							<p>plurarl downcase resource : {{ pluralDowncaseResource }}</p>
 							
-							<p>plurarl downcase nested resource : {{nestedResource | lowercase | pluralize}}</p>
-							<p>singular propercase nested resource : {{nestedResource | titleize}}</p>
-							<p>singular downcase nested resource : {{nestedResource | lowercase | singularize }}</p>
+							<p>singular downcase nested resource : {{ singularDowncaseNestedResource }}</p>
+							<p>singular propercase nested resource : {{ singularPropercaseNestedResource }}</p>
+							<p>plurarl downcase nested resource : {{ pluralDowncaseNestedResource  }}</p>
 
+						<!-- 	<p>plurarl downcase resource : {{ resource | lowercase | pluralize }}</p>
+							<p>singular propercase resource : {{ resource | titleize }}</p>
+							<p>singular downcase resource : {{ resource | lowercase | singularize  }}</p>
+							
+							<p>plurarl downcase nested resource : {{ nestedResource | lowercase | pluralize }}</p>
+							<p>singular propercase nested resource : {{ nestedResource | titleize }}</p>
+							<p>singular downcase nested resource : {{ nestedResource | lowercase | singularize }}</p>
+ -->
 						</tbody>
 					</table>
 				</div>

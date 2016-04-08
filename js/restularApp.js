@@ -1,23 +1,30 @@
 var restularApp = angular.module('Restular', ['ngInflection']);
 
-restularApp.controller('TableCtrl', function($scope){
+restularApp.controller('TableCtrl', function($scope, $filter){
 
-  $scope.resource = "articles"
-  $scope.nestedResource = "tags"
+  $scope.resource = "ARTicles"
+  $scope.nestedResource = "TAgs"
 
-  // // Single resource 
-  // $scope.singularDowncaseResource = pluralize($scope.resource.toLowerCase(), 1)
-  // $scope.singularPropercaseResource = pluralize(propercase($scope.resource), 1)
-  // $scope.pluralDowncaseResource = $scope.resource.toLowerCase()
+  // Single resource
+  $scope.singularDowncaseResource = $filter('lowercase')($scope.resource)
+  $scope.singularDowncaseResource = $filter('transform')($scope.singularDowncaseResource, ['singularize'])
+
+  $scope.singularPropercaseResource = $filter('transform')($scope.resource, ['titleize', 'singularize'])
+  
+  $scope.pluralDowncaseResource = $filter('lowercase')($scope.resource)
+  $scope.pluralDowncaseResource = $filter('transform')($scope.pluralDowncaseResource, ['pluralize'])
 
   // // Nested resource 
+  $scope.singularDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
+  $scope.singularDowncaseNestedResource = $filter('transform')($scope.singularDowncaseNestedResource, ['singularize'])
+
+  $scope.singularPropercaseNestedResource = $filter('transform')($scope.nestedResource, ['titleize', 'singularize'])
+  
+  $scope.pluralDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
+  $scope.pluralDowncaseNestedResource = $filter('transform')($scope.pluralDowncaseNestedResource, ['pluralize'])
+
   // $scope.singularDowncaseNestedResource = pluralize($scope.nestedResource.toLowerCase(), 1)
   // $scope.singularPropercaseNestedResource = pluralize(propercase($scope.nestedResource), 1)
   // $scope.pluralDowncaseNestedResource = $scope.nestedResource.toLowerCase()
 
-
-  function propercase(string) {
-    var lowerCaseString = string.toLowerCase();
-    return lowerCaseString.charAt(0).toUpperCase() + lowerCaseString.slice(1);
-  }
 });
