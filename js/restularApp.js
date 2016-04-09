@@ -23,8 +23,4 @@ restularApp.controller('TableCtrl', function($scope, $filter){
   $scope.pluralDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
   $scope.pluralDowncaseNestedResource = $filter('transform')($scope.pluralDowncaseNestedResource, ['pluralize'])
 
-  // $scope.singularDowncaseNestedResource = pluralize($scope.nestedResource.toLowerCase(), 1)
-  // $scope.singularPropercaseNestedResource = pluralize(propercase($scope.nestedResource), 1)
-  // $scope.pluralDowncaseNestedResource = $scope.nestedResource.toLowerCase()
-
 });
