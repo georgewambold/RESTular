@@ -13,11 +13,12 @@
 		<script src="https://cdn.rawgit.com/dreamerslab/node.inflection/master/inflection.min.js"></script>
 		<script src="http://konsumer.github.io/ngInflection/dist/ngInflection.min.js"></script>
 		<script type="text/javascript" src="js/RESTular.js"></script>
+		<script type="text/javascript" src="js/filters.js"></script>
 		<script type="text/javascript" src="js/restularApp.js"></script>
 		<script type="text/javascript" src="js/templates.js"></script>
 		<script type="text/javascript" src="js/TableRows.js"></script>
 	</head>
-	<body ng-app="Restular" ng-controller="TableCtrl">
+	<body ng-app="Restular" ng-controller="TableCtrl"  data-ng-init="init()">
 		<header>
 			<h1>/REST<span id="second-half">ular</span></h1>
 			<p>A Sinatra routing resource.</p>
@@ -25,8 +26,8 @@
 			<div id="wrapper">
 				<div id="golden-form">
 					<form id="resource-input">
-						<input ng-model="resourceInput" id="base-route" size="50" value="articles">
-						<input ng-model="nestedResource" id="nested-route" placeholder="(nested resource)">
+						<input ng-model="resource" ng-change="updateResourceVars()" id="base-route" size="50" value="articles">
+						<input ng-model="nestedResource" ng-change="updateResourceVars()" id="nested-route" placeholder="(nested resource)">
 					</form>
 				</div>
 				<div class="sub-box-under">(Type in your table names and <b>click the table below</b> for full route info)</div>
