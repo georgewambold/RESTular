@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="libraries/ZeroClipboard.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.3/angular-sanitize.min.js"></script>
 		<script src="https://cdn.rawgit.com/dreamerslab/node.inflection/master/inflection.min.js"></script>
 		<script src="http://konsumer.github.io/ngInflection/dist/ngInflection.min.js"></script>
 		<script type="text/javascript" src="js/RESTular.js"></script>
@@ -42,7 +43,7 @@
 							</tr>
 						</thead>
 						<tbody id="route-body">
-<!-- 						
+						
 							<p>singular downcase resource : {{ singularDowncaseResource }}</p>
 							<p>singular propercase resource : {{ singularPropercaseResource }}</p>
 							<p>plurarl downcase resource : {{ pluralDowncaseResource }}</p>
@@ -50,19 +51,23 @@
 							<p>singular downcase nested resource : {{ singularDowncaseNestedResource }}</p>
 							<p>singular propercase nested resource : {{ singularPropercaseNestedResource }}</p>
 							<p>plurarl downcase nested resource : {{ pluralDowncaseNestedResource  }}</p>
- -->
+
 
 					
 							<tr ng-repeat-start="singularRoute in singularRoutes" class='route'>
-								<td> {{ singularRoute.type }} </td>
-								<td> {{ singularRoute.path }} </td>
-								<td> {{ singularRoute.viewFile }} </td>
-								<td> {{ singularRoute.description }} </td>
+								<td bind-html-compile="singularRoute.type"></td>
+								<td bind-html-compile="singularRoute.path"></td>
+								<td bind-html-compile="singularRoute.viewFile"></td>
+								<td bind-html-compile="singularRoute.description"></td>
 							</tr>
 							<tr ng-repeat-end class='route-info'>
-								<td colspan='2'><span class='temp-header'>Path Template:</span><pre class='route-pre'>  {{ singularRoute.vanilla }}  </pre><div class='copy-prompt'>^click to copy^</div>
+								<td colspan='2'><span class='temp-header'>Path Template:</span>
+									<pre class='route-pre' bind-html-compile="singularRoute.vanilla"></pre>
+									<div class='copy-prompt'>^click to copy^</div>
 								</td>
-								<td colspan='2'><span class='temp-header'>Suggestions:</span><span class='header-caption'> (to be taken with a grain of salt)</span><pre class='route-pre'>  {{ singularRoute.suggested }}  </pre><div class='copy-prompt'>^click to copy^</div>
+								<td colspan='2'><span class='temp-header'>Suggestions:</span><span class='header-caption'> (to be taken with a grain of salt)</span>
+									<pre class='route-pre' bind-html-compile="singularRoute.suggested"></pre>
+									<div class='copy-prompt'>^click to copy^</div>
 								</td>
 							</tr >
 						

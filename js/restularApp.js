@@ -1,16 +1,14 @@
-var restularApp = angular.module('Restular', ['ngInflection', 'restularFilters']);
+var restularApp = angular.module('Restular', ['ngInflection', 'restularFilters', 'ngSanitize']);
 
-restularApp.controller('TableCtrl', function($scope, $filter){
-
-  $scope.singularRoutes = singularRoutes
-  $scope.nestedRoutes = nestedRoutes
-
-  $scope.resource = "articles"
-  $scope.nestedResource = ""
+restularApp.controller('TableCtrl', function($scope, $filter, $sce, $compile, $interpolate, $templateCache){
 
   $scope.init = function () {
     $scope.updateResourceVars()
   }
+
+
+  $scope.resource = "articles"
+  $scope.nestedResource = ""
 
   $scope.updateResourceVars = function () {
 
@@ -34,5 +32,24 @@ restularApp.controller('TableCtrl', function($scope, $filter){
       $scope.pluralDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
     }
   }
+  
 
+  $scope.singularRoutes = singularRoutes
+  // $scope.singularRoutes = $scope.trustTemplatesAsHtml(singularRoutes)
+  $scope.nestedRoutes = nestedRoutes
+  // $scope.updateResourceVars()
 });
+
+restularApp.directive('bindHtmlCompile', ['$compile', function ($compile) {
+  return {
+    restrict: 'A',
+    link: function (scope, element, attrs) {
+        scope.$watch(function () {
+            return scope.$eval(attrs.bindHtmlCompile);
+        }, function (value) {
+            element.html(value);
+            $compile(element.contents())(scope);
+        });
+    }
+  };
+}]);
