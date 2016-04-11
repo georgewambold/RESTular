@@ -3,7 +3,7 @@ var restularApp = angular.module('Restular', ['ngInflection', 'restularFilters']
 restularApp.controller('TableCtrl', function($scope, $filter){
 
   $scope.resource = "articles"
-  $scope.nestedResource = "tags"
+  $scope.nestedResource = ""
 
   $scope.init = function () {
     $scope.updateResourceVars()
@@ -21,13 +21,15 @@ restularApp.controller('TableCtrl', function($scope, $filter){
     $scope.pluralDowncaseResource = $filter('lowercase')($scope.resource)
 
     // Nested resource
-    $scope.singularDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
-    $scope.singularDowncaseNestedResource = $filter('transform')($scope.singularDowncaseNestedResource, ['singularize'])
+    if ($scope.nestedResource) {
+      $scope.singularDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
+      $scope.singularDowncaseNestedResource = $filter('transform')($scope.singularDowncaseNestedResource, ['singularize'])
 
-    $scope.singularPropercaseNestedResource = $filter('capitalize')($scope.nestedResource)
-    $scope.singularPropercaseNestedResource = $filter('transform')($scope.singularPropercaseNestedResource, ['singularize'])
-    
-    $scope.pluralDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
+      $scope.singularPropercaseNestedResource = $filter('capitalize')($scope.nestedResource)
+      $scope.singularPropercaseNestedResource = $filter('transform')($scope.singularPropercaseNestedResource, ['singularize'])
+      
+      $scope.pluralDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
+    }
   }
 
 });
