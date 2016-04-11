@@ -1,4 +1,4 @@
-singularRoutes = [
+var singularRoutes = [
 	{ 
   	"type" : "GET",
 
@@ -100,7 +100,7 @@ singularRoutes = [
 // 'comment' = <span class='singular-downcase-nested-text'></span>
 // 'Comment' = <span class='singular-nested-text'></span>
 
-nestedRoutes = [
+var nestedRoutes = [
   {
     "type" : "GET",
 
