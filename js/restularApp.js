@@ -2,13 +2,24 @@ var restularApp = angular.module('Restular', ['ngInflection', 'restularFilters',
 
 restularApp.controller('TableCtrl', function($scope, $filter, $sce, $compile, $interpolate, $templateCache){
 
-  $scope.init = function () {
-    $scope.updateResourceVars()
+
+
+  $scope.checkForNestedRoutes = function () {
+    if ($scope.nestedResource) {
+      return nestedRoutes
+    } else {
+      return singularRoutes
+    }
   }
 
+  $scope.routes = $scope.checkForNestedRoutes()
 
   $scope.resource = "articles"
   $scope.nestedResource = ""
+
+  $scope.init = function () {
+    $scope.updateResourceVars()
+  }
 
   $scope.updateResourceVars = function () {
 
@@ -34,10 +45,6 @@ restularApp.controller('TableCtrl', function($scope, $filter, $sce, $compile, $i
   }
   
 
-  $scope.singularRoutes = singularRoutes
-  // $scope.singularRoutes = $scope.trustTemplatesAsHtml(singularRoutes)
-  $scope.nestedRoutes = nestedRoutes
-  // $scope.updateResourceVars()
 });
 
 restularApp.directive('bindHtmlCompile', ['$compile', function ($compile) {

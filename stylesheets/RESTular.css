@@ -79,10 +79,6 @@ header p {
 	text-align: left;
 }
 
-.route-info {
-	display: none;
-}
-
 .route-info td {
 	height: 100px;
 }
