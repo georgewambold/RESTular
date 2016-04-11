@@ -43,17 +43,6 @@
 							</tr>
 						</thead>
 						<tbody id="route-body">
-						
-							<p>singular downcase resource : {{ singularDowncaseResource }}</p>
-							<p>singular propercase resource : {{ singularPropercaseResource }}</p>
-							<p>plurarl downcase resource : {{ pluralDowncaseResource }}</p>
-							
-							<p>singular downcase nested resource : {{ singularDowncaseNestedResource }}</p>
-							<p>singular propercase nested resource : {{ singularPropercaseNestedResource }}</p>
-							<p>plurarl downcase nested resource : {{ pluralDowncaseNestedResource  }}</p>
-
-
-					
 							<tr ng-repeat-start="singularRoute in singularRoutes" class='route'>
 								<td bind-html-compile="singularRoute.type"></td>
 								<td bind-html-compile="singularRoute.path"></td>
@@ -61,26 +50,18 @@
 								<td bind-html-compile="singularRoute.description"></td>
 							</tr>
 							<tr ng-repeat-end class='route-info'>
-								<td colspan='2'><span class='temp-header'>Path Template:</span>
+								<td colspan='2'>
+									<span class='temp-header'>Path Template:</span>
 									<pre class='route-pre' bind-html-compile="singularRoute.vanilla"></pre>
 									<div class='copy-prompt'>^click to copy^</div>
 								</td>
-								<td colspan='2'><span class='temp-header'>Suggestions:</span><span class='header-caption'> (to be taken with a grain of salt)</span>
+								<td colspan='2'>
+									<span class='temp-header'>Suggestions:</span>
+									<span class='header-caption'> (to be taken with a grain of salt)</span>
 									<pre class='route-pre' bind-html-compile="singularRoute.suggested"></pre>
 									<div class='copy-prompt'>^click to copy^</div>
 								</td>
 							</tr >
-						
-
-
-						<!-- 	<p>plurarl downcase resource : {{ resource | lowercase | pluralize }}</p>
-							<p>singular propercase resource : {{ resource | titleize }}</p>
-							<p>singular downcase resource : {{ resource | lowercase | singularize  }}</p>
-							
-							<p>plurarl downcase nested resource : {{ nestedResource | lowercase | pluralize }}</p>
-							<p>singular propercase nested resource : {{ nestedResource | titleize }}</p>
-							<p>singular downcase nested resource : {{ nestedResource | lowercase | singularize }}</p>
- -->
 						</tbody>
 					</table>
 				</div>
