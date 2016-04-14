@@ -1,34 +1,3 @@
-// 1
-// 'articles' = {{ pluralDowncaseResource }}
-// 'articles' = {{ pluralDowncaseResource }}
-// plurarl downcase resource : {{ pluralDowncaseResource }}
-
-// 2
-// 'article' = {{ singularDowncaseResource }}
-// 'article' = {{ singularDowncaseResource }}
-// singular downcase resource : {{ singularDowncaseResource }}
-
-// 3 
-// 'Article' = {{ singularPropercaseResource }}
-// 'Article' = {{ singularPropercaseResource }}
-// singular propercase resource : {{ singularPropercaseResource }}
-
-
-// 4
-// 'comments' = {{ pluralDowncaseNestedResource  }}
-// plurarl downcase nested resource : {{ pluralDowncaseNestedResource  }}
-
-
-// 5
-// 'comment' = {{ singularDowncaseNestedResource }}
-// singular downcase nested resource : {{ singularDowncaseNestedResource }}
-
-
-
-
-
-
-
 singularRoutes = [
   { 
     "type" : "GET",
