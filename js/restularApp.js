@@ -3,7 +3,6 @@ var restularApp = angular.module('Restular', ['ngInflection', 'restularFilters',
 restularApp.controller('TableCtrl', function($scope, $filter, $sce, $compile, $interpolate, $templateCache){
 
   $scope.routes = singularRoutes
-
   $scope.resource = "articles"
   $scope.nestedResource = ""
 
