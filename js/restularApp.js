@@ -7,8 +7,8 @@ restularApp.controller('TableCtrl', function($scope, $filter, $sce, $compile, $i
   $scope.resource = "articles"
   $scope.nestedResource = ""
 
-  $scope.$watch('resource', function (newValue){
-    downcaseNewValue = $filter('lowercase')(newValue)
+  $scope.$watchGroup(['resource', 'nestedResource'], function (newValues){
+    downcaseNewValue = $filter('lowercase')(newValues[0])
 
     // Singular resource variables
     $scope.singularDowncaseResource = $filter('transform')(downcaseNewValue, ['singularize'])
@@ -16,11 +16,14 @@ restularApp.controller('TableCtrl', function($scope, $filter, $sce, $compile, $i
     $scope.pluralDowncaseResource = downcaseNewValue
 
     // Nested resource 
-    if ($scope.nestedResource) {
-      downcaseNestedResource = $filter('lowercase')($scope.nestedResource)
+    if (newValues[1]) {
+      $scope.routes = nestedRoutes
+      downcaseNestedResource = $filter('lowercase')(newValues[1])
 
       $scope.singularDowncaseNestedResource = $filter('transform')(downcaseNestedResource, ['singularize'])
       $scope.pluralDowncaseNestedResource = downcaseNestedResource
+    } else {
+      $scope.routes = singularRoutes
     }
   });
 
