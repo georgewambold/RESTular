@@ -1,1 +1,1 @@
-var restularApp = angular.module('Restular', ['ngInflection', 'restularFilters', 'ngSanitize']);
+var restularIndex = angular.module('restularIndex', ['ngInflection', 'ngSanitize']);

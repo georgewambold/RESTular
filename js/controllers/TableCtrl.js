@@ -1,4 +1,4 @@
-restularApp.controller('TableCtrl', function($scope, $filter, $compile){
+restularIndex.controller('TableCtrl', function($scope, $filter, $compile){
 
   // route template
   $scope.routes = singularRoutes

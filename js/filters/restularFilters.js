@@ -1,4 +1,4 @@
-angular.module('restularFilters', []).filter('capitalize', function() {
+restularIndex.filter('capitalize', function() {
   return function(input, scope) {
     if (input!=null)
     input = input.toLowerCase();

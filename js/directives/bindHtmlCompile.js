@@ -1,4 +1,4 @@
-restularApp.directive('bindHtmlCompile', ['$compile', function ($compile) {
+restularIndex.directive('bindHtmlCompile', ['$compile', function ($compile) {
   return {
     restrict: 'A',
     // 'restrict: A'
