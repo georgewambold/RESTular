@@ -2,45 +2,27 @@ var restularApp = angular.module('Restular', ['ngInflection', 'restularFilters',
 
 restularApp.controller('TableCtrl', function($scope, $filter, $sce, $compile, $interpolate, $templateCache){
 
-
-
-  $scope.checkForNestedRoutes = function () {
-    if ($scope.nestedResource) {
-      return nestedRoutes
-    } else {
-      return singularRoutes
-    }
-  }
-
-  $scope.routes = $scope.checkForNestedRoutes()
+  $scope.routes = singularRoutes
 
   $scope.resource = "articles"
   $scope.nestedResource = ""
 
-  $scope.init = function () {
-    $scope.updateResourceVars()
-  }
+  $scope.$watch('resource', function (newValue){
+    downcaseNewValue = $filter('lowercase')(newValue)
 
-  // $scope.updateResourceVars = function () {
+    // Singular resource variables
+    $scope.singularDowncaseResource = $filter('transform')(downcaseNewValue, ['singularize'])
+    $scope.singularPropercaseResource = $filter('transform')(downcaseNewValue, ['singularize'])
+    $scope.pluralDowncaseResource = downcaseNewValue
 
-  //   // Single resource
-  //   $scope.singularDowncaseResource = $filter('lowercase')($scope.resource)
-  //   $scope.singularDowncaseResource = $filter('transform')($scope.singularDowncaseResource, ['singularize'])
+    // Nested resource 
+    if ($scope.nestedResource) {
+      $scope.singularDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
+      $scope.singularDowncaseNestedResource = $filter('transform')($scope.singularDowncaseNestedResource, ['singularize'])
 
-  //   $scope.singularPropercaseResource = $filter('capitalize')($scope.resource)
-  //   $scope.singularPropercaseResource = $filter('transform')($scope.singularPropercaseResource, ['singularize'])
-    
-  //   $scope.pluralDowncaseResource = $filter('lowercase')($scope.resource)
-
-  //   // Nested resource
-  //   if ($scope.nestedResource) {
-  //     $scope.singularDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
-  //     $scope.singularDowncaseNestedResource = $filter('transform')($scope.singularDowncaseNestedResource, ['singularize'])
-      
-  //     $scope.pluralDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
-  //   }
-  // }
-  
+      $scope.pluralDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
+    }
+  });
 
 });
 
