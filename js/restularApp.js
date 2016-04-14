@@ -17,10 +17,10 @@ restularApp.controller('TableCtrl', function($scope, $filter, $sce, $compile, $i
 
     // Nested resource 
     if ($scope.nestedResource) {
-      $scope.singularDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
-      $scope.singularDowncaseNestedResource = $filter('transform')($scope.singularDowncaseNestedResource, ['singularize'])
+      downcaseNestedResource = $filter('lowercase')($scope.nestedResource)
 
-      $scope.pluralDowncaseNestedResource = $filter('lowercase')($scope.nestedResource)
+      $scope.singularDowncaseNestedResource = $filter('transform')(downcaseNestedResource, ['singularize'])
+      $scope.pluralDowncaseNestedResource = downcaseNestedResource
     }
   });
 
