@@ -3,17 +3,25 @@
 	<head>
 		<title>RESTular</title>
 		<meta charset="utf-8">
+		<!-- stylesheets -->
 		<link rel="stylesheet" href="stylesheets/normalize.css">
 		<link rel="stylesheet" href="stylesheets/RESTular.css">
+		<!-- resources -->
 		<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+		<!-- libraries -->
 		<script type="text/javascript" src="libraries/ZeroClipboard.js"></script>
+		<!-- angular resources -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.3/angular-sanitize.min.js"></script>
 		<script src="https://cdn.rawgit.com/dreamerslab/node.inflection/master/inflection.min.js"></script>
 		<script src="http://konsumer.github.io/ngInflection/dist/ngInflection.min.js"></script>
-		<script type="text/javascript" src="js/filters.js"></script>
-		<script type="text/javascript" src="js/restularApp.js"></script>
+		<!-- angular app -->
 		<script type="text/javascript" src="js/templates.js"></script>
+		<script type="text/javascript" src="js/restularApp.js"></script>
+		<script type="text/javascript" src="js/controllers/TableCtrl.js"></script>
+		<script type="text/javascript" src="js/filters/restularFilters.js"></script>
+		<script type="text/javascript" src="js/directives/bindHtmlCompile.js"></script>
+		<!-- End scripts -->
 	</head>
 	<body ng-app="Restular" ng-controller="TableCtrl">
 		<header>

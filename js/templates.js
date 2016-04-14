@@ -1,16 +1,16 @@
 // 1
-// 'teas' = {{ pluralDowncaseResource }}
-// 'teas' = {{ pluralDowncaseResource }}
+// 'articles' = {{ pluralDowncaseResource }}
+// 'articles' = {{ pluralDowncaseResource }}
 // plurarl downcase resource : {{ pluralDowncaseResource }}
 
 // 2
-// 'tea' = {{ singularDowncaseResource }}
-// 'tea' = {{ singularDowncaseResource }}
+// 'article' = {{ singularDowncaseResource }}
+// 'article' = {{ singularDowncaseResource }}
 // singular downcase resource : {{ singularDowncaseResource }}
 
 // 3 
-// 'Tea' = {{ singularPropercaseResource }}
-// 'Tea' = {{ singularPropercaseResource }}
+// 'Article' = {{ singularPropercaseResource }}
+// 'Article' = {{ singularPropercaseResource }}
 // singular propercase resource : {{ singularPropercaseResource }}
 
 
