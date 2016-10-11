@@ -58,25 +58,20 @@
 							<tr ng-repeat-end class='route-info' ng-show="showSuggestions">
 								<td colspan='2'>
 									<span class='temp-header'>Path template:</span>
-										<pre ui-zeroclip zeroclip-copied="copied=true" zeroclip-text='{{route.vanilla}}' bind-html-compile="route.vanilla"></pre>
+										<input ng-hide ng-model='vanillaRoute' bind-html-compile="route.vanilla"/>
+										<pre ui-zeroclip zeroclip-copied="copied=true" zeroclip-text='{{vanillaRoute}}' bind-html-compile="route.vanilla"></pre>
 									<div ng-hide='copied'>^click to copy^</div>
-									<div ng-show='copied'>^copied!^</div>
+									<div ng-show='copied'>copied!</div>
 								</td>
 								<td colspan='2'>
 									<span class='temp-header'>Simple example:</span>
-										<pre ui-zeroclip zeroclip-copied="copied=true" zeroclip-text='{{route.suggested}}' bind-html-compile="route.suggested"></pre>
+										<pre ui-zeroclip zeroclip-copied="copied=true" zeroclip-text='{{ interpolate(route.suggested) }}' bind-html-compile="route.suggested"></pre>
 									<div ng-hide='copied'>^click to copy^</div>
-									<div ng-show='copied'>^copied!^</div>
+									<div ng-show='copied'>copied!</div>
 								</td>
 							</tr >
 						</tbody>
-
-					</table>
-					
-					<input type="text" ng-model="myText" />
-					<button ui-zeroclip zeroclip-copied="copied=true" zeroclip-model="myText">Copy</button>
-					<span ng-show="copied">Text Copied!</span>
-				
+					</table>				
 				</div>
 				<div id="push"></div>
 			</div>
