@@ -1,4 +1,8 @@
-restularIndex.controller('TableCtrl', function($scope, $filter, $compile){
+restularIndex.controller('TableCtrl', function($scope, $filter, $compile, $interpolate){
+
+  $scope.interpolate = function(value) {
+    return $interpolate(value)($scope)
+  }
 
   // route template
   $scope.routes = singularRoutes

@@ -4,7 +4,7 @@ angular.module('zeroclipboard', [])
     // default configs
     var _zeroclipConfig = {
       buttonClass: '',
-      swfPath: "ZeroClipboard.swf",
+      swfPath: "../libraries/ZeroClipboard.swf",
       trustedDomains: [window.location.host],
       cacheBust: true,
       forceHandCursor: false,
