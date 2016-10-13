@@ -5,6 +5,7 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    text-align: center;
 }
 
 header {
@@ -163,4 +164,9 @@ footer {
 
 footer p a {
 	color: #c52f24;
+}
+
+#push {
+	padding-top: 30px;
+	height:91px;
 }
