@@ -5,6 +5,7 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    text-align: center;
 }
 
 header {
@@ -79,10 +80,6 @@ header p {
 	text-align: left;
 }
 
-.route-info {
-	display: none;
-}
-
 .route-info td {
 	height: 100px;
 }
@@ -117,8 +114,12 @@ border: 2px solid #f4b7b2 ;
 	background-color: #f1938c;
 }
 
-.hover {
+.hover:hover {
 	background-color: silver;
+}
+
+.indicate-hover {
+	font-size: 100px;
 }
 
 #wrapper {
@@ -163,4 +164,9 @@ footer {
 
 footer p a {
 	color: #c52f24;
+}
+
+#push {
+	padding-top: 30px;
+	height:91px;
 }
