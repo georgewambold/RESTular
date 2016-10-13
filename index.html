@@ -10,6 +10,9 @@
 		<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
 		<!-- libraries -->
 		<script type="text/javascript" src="libraries/ZeroClipboard.js"></script>
+		<!-- jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/restularJQuery.js"></script>
 		<!-- angular resources -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.3/angular-sanitize.min.js"></script>
@@ -49,7 +52,7 @@
 						</thead>
 
 						<tbody id="route-body">
-							<tr ng-repeat-start="route in routes" ng-click="showSuggestions = ! showSuggestions" class='route'>
+							<tr ng-repeat-start="route in routes" ng-click="showSuggestions = ! showSuggestions" class='hover'>
 								<td bind-html-compile="route.type"></td>
 								<td bind-html-compile="route.path"></td>
 								<td bind-html-compile="route.viewFile"></td>
@@ -58,15 +61,13 @@
 							<tr ng-repeat-end class='route-info' ng-show="showSuggestions">
 								<td colspan='2'>
 									<span class='temp-header'>Path template:</span>
-										<pre ui-zeroclip zeroclip-copied="copied=true" zeroclip-text='{{ interpolate(route.vanilla) }}' bind-html-compile="route.vanilla"></pre>
-									<div ng-hide='copied'>^click to copy^</div>
-									<div ng-show='copied'>copied!</div>
+										<pre class='route-pre' ui-zeroclip zeroclip-text='{{ interpolate(route.vanilla) }}' bind-html-compile="route.vanilla"></pre>
+									<span class='indicate-copy'>(click to copy)</div>
 								</td>
 								<td colspan='2'>
 									<span class='temp-header'>Simple example:</span>
-										<pre ui-zeroclip zeroclip-copied="copied=true" zeroclip-text='{{ interpolate(route.suggested) }}' bind-html-compile="route.suggested"></pre>
-									<div ng-hide='copied'>^click to copy^</div>
-									<div ng-show='copied'>copied!</div>
+										<pre class='route-pre' ui-zeroclip zeroclip-text='{{ interpolate(route.suggested) }}' bind-html-compile="route.suggested"></pre>
+									<span class='indicate-copy'>(click to copy)</div>
 								</td>
 							</tr >
 						</tbody>

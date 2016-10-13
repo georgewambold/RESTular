@@ -113,8 +113,12 @@ border: 2px solid #f4b7b2 ;
 	background-color: #f1938c;
 }
 
-.hover {
+.hover:hover {
 	background-color: silver;
+}
+
+.indicate-hover {
+	font-size: 100px;
 }
 
 #wrapper {
