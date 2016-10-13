@@ -5,7 +5,6 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    text-align: center;
 }
 
 header {
@@ -169,4 +168,5 @@ footer p a {
 #push {
 	padding-top: 30px;
 	height:91px;
+	text-align: center;
 }
