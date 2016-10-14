@@ -147,6 +147,26 @@ border: 2px solid #f4b7b2 ;
 	box-shadow: .5px .5px 1px #707070;
 }
 
+#about-header {
+	font-size: 200%;
+	margin-top: 1%;
+}
+
+#about-text {
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 1%;
+	padding: 20px;
+	font-size: 110%;
+	box-sizing: border-box;
+	background-color: #eee;
+	border-radius: 6px;
+}
+
+#about-wrapper {
+	text-align: center;
+}
+
 footer {
 	position: relative;
 	margin-top: 3em;

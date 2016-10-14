@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RESTular</title>
+    <meta charset="utf-8">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/RESTular.css">
+    <!-- resources -->
+    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+    <!-- libraries -->
+    <script type="text/javascript" src="libraries/ZeroClipboard.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/restularJQuery.js"></script>
+    <!-- angular resources -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.3/angular-sanitize.min.js"></script>
+    <script src="https://cdn.rawgit.com/dreamerslab/node.inflection/master/inflection.min.js"></script>
+    <script src="http://konsumer.github.io/ngInflection/dist/ngInflection.min.js"></script>
+    <!-- angular app -->
+    <script type="text/javascript" src="js/restularApp.js"></script>
+    <script type="text/javascript" src="js/templates.js"></script>
+    <script type="text/javascript" src="js/controllers/TableCtrl.js"></script>
+    <script type="text/javascript" src="js/filters/restularFilters.js"></script>
+    <script type="text/javascript" src="js/directives/bindHtmlCompile.js"></script>
+    <script type="text/javascript" src="js/modules/angular-zeroclipboard.js"></script>
+    <!-- End scripts -->
+  </head>
+  <body ng-app="restularIndex" ng-controller="TableCtrl">
+    <header>
+      <h1>/REST<span id="second-half">ular</span></h1>
+      <p>A Sinatra routing resource.</p>
+    </header>
+      <div id="about-wrapper">
+        <div id='about-header'>About RESTular:</div>
+        <div id='about-footer'><a href='/'><-- back to RESTular</a></div>
+        <div id='about-text'>
+          <p>
+            RESTular is a learning tool created for those learning about <a href='https://en.wikipedia.org/wiki/Representational_state_transfer' target="_blank">RESTful routing</a> in <a href='http://www.sinatrarb.com/'  target="_blank">Sinatra</a>, <a href='http://rubyonrails.org/' target="_blank">Ruby on Rails</a> or really app that serves data. I was inspired to build it after reading the <a href='http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions' target="_blank">Rails docs on CRUD</a> and seeing this picture:
+          </p>
+          <img style="height:60%;width:60%;" src="resources/railsRestTable.png">
+          <p>
+            I thought to myself 'wouldn't it be cool if you could just put your table name and it would show you your routes?'
+          </p>
+          <p>
+            I built the first iteration of this site over the weekend during Dev Bootcamp Chicago in November 2015. I've updated it quite a bit since, I even rewrote it to learn AngularJS.
+          </p>
+          <p>
+            It's been a while since I built an app with this site, so I'm sure some of the routes could use updating or are plain wrong-- If you see something messed up, I highly appreciate suggestions or corrections. Feel free to email me at georgewambold@gmail.com or contribute an issue to the <a href="https://github.com/gaw1990/RESTular" target="_blank">GitHub repo</a>.
+          </p>          
+          <p>
+            Thanks for using RESTular, I hope it made your life a little easier!
+          </p>
+        </div>
+        <div id='about-footer'><a href='/'><-- back to RESTular</a></div>
+      </div>
+    <footer>
+      <p>Created by George Wambold</p>
+      <p><a href="https://github.com/gaw1990" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/georgewambold" target="_blank">LinkedIn</a></p>
+    </footer>
+  </body>
+</html>
