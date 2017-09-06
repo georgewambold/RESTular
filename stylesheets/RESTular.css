@@ -73,6 +73,10 @@ header p {
 	padding: 10px;
 }
 
+#white-link {
+	color:rgb(153, 153, 153);
+}
+  
 .route td {
 	min-width: 150px;
 	max-width: 300px;
